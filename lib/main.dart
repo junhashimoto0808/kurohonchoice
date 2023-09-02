@@ -59,35 +59,38 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  //int _counter = 0;
   //final double _fontSize = 15;
 
   String _songName = '',
       _songVol = '',
       _songCreater = '',
-      //_songMajor = '',
       _songKey = '',
       _songBeat = '',
-      _songIsBlues = '',
-      _songIdRhythmChange = '',
+      _songIsBluesRhythmChange = '',
       _songStyle = '';
 
   int _condVol = 0;
   String _condStyle = '';
+  String _condSongName = '';
+  String _condCreaterName = '';
 
   List<String> choiceStyle = List.empty(growable: true);
+
+  final _controller = TextEditingController();
+  final _controller2 = TextEditingController();
 
   _MyHomePageState() {
     choiceStyle.add('');
     for (var i = 0; i < songData.length; i++) {
-      choiceStyle.add(songData[i][8]);
+      choiceStyle.add(songData[i][7]);
     }
     choiceStyle = choiceStyle.toSet().toList();
     choiceStyle.sort(((a, b) => a.compareTo(b)));
     return;
   }
 
-  void _incrementCounter() {
+  void _choiceSong() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -96,44 +99,71 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
 
       //_counter++;
-      var random = math.Random();
 
-      while (true) {
-        _counter = random.nextInt(songData.length);
-        if (_condVol == 0 && _condStyle == '') {
-          break;
-        }
+      List<int> randomIntArray = <int>[];
+      var randomSeed = math.Random();
+      int random = 0;
 
-        if (_condVol != 0 && _condStyle == '') {
-          if (int.parse(songData[_counter][0]) == _condVol) {
-            break;
-          }
-        }
-
-        if (_condVol == 0 && _condStyle != '') {
-          if (songData[_counter][8] == _condStyle) {
-            break;
-          }
-        }
-
-        if (_condVol != 0 && _condStyle != '') {
-          if (int.parse(songData[_counter][0]) == _condVol) {
-            if (songData[_counter][8] == _condStyle) {
-              break;
-            }
-          }
+      while (randomIntArray.length < songData.length) {
+        random = randomSeed.nextInt(songData.length);
+        if (!randomIntArray.contains(random)) {
+          randomIntArray.add(random);
         }
       }
 
-      _songName = songData[_counter][1];
-      _songVol = songData[_counter][0];
-      _songCreater = songData[_counter][2];
-      //_songMajor = songData[_counter][3];
-      _songKey = songData[_counter][4];
-      _songBeat = songData[_counter][5];
-      _songIsBlues = songData[_counter][6];
-      _songIdRhythmChange = songData[_counter][7];
-      _songStyle = songData[_counter][8];
+      var i = 0;
+      int a = 0;
+      for (i = 0; i < randomIntArray.length; i++) {
+        a = randomIntArray[i];
+        if (_condVol != 0) {
+          if (int.parse(songData[a][0]) != _condVol) {
+            continue;
+          }
+        }
+
+        if (_condStyle != '') {
+          if (songData[a][7] != _condStyle) {
+            continue;
+          }
+        }
+
+        if (_condSongName != '') {
+          if (!songData[a][1]
+              .toUpperCase()
+              .contains(_condSongName.toUpperCase())) {
+            continue;
+          }
+        }
+
+        if (_condCreaterName != '') {
+          if (!songData[a][2]
+              .toUpperCase()
+              .contains(_condCreaterName.toUpperCase())) {
+            continue;
+          }
+        }
+        break;
+      }
+
+      if (i == randomIntArray.length) {
+        // not found
+        _songName = '';
+        _songVol = '';
+        _songCreater = '';
+        _songKey = '';
+        _songBeat = '';
+        _songIsBluesRhythmChange = '';
+        _songStyle = '';
+      } else {
+        // found
+        _songName = songData[a][1];
+        _songVol = songData[a][0];
+        _songCreater = songData[a][2];
+        _songKey = songData[a][4];
+        _songBeat = songData[a][5];
+        _songIsBluesRhythmChange = songData[a][6];
+        _songStyle = songData[a][7];
+      }
     });
   }
 
@@ -251,16 +281,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     DataRow(
                       cells: [
-                        const DataCell(Text('ブルース')),
-                        DataCell(Text(_songIsBlues)),
+                        const DataCell(Text('Blues/循環')),
+                        DataCell(Text(_songIsBluesRhythmChange)),
                       ],
                     ),
+                    /*
                     DataRow(
                       cells: [
                         const DataCell(Text('循環')),
                         DataCell(Text(_songIdRhythmChange)),
                       ],
                     ),
+                    */
                     DataRow(
                       cells: [
                         const DataCell(Text('スタイル')),
@@ -269,54 +301,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                /*
-                const Text(
-                  '',
-                  style: TextStyle(fontSize: 15),
-                ),
-                Text(
-                  '巻：'
-                  '$_songVol',
-                  style: const TextStyle(fontSize: 15),
-                ),
-                Text(
-                  '作曲者：'
-                  '$_songCreater',
-                  style: const TextStyle(fontSize: 15),
-                ),
-                /*
-                Text(
-                  '調：'
-                  '$_songMajor',
-                  style: const TextStyle(fontSize: 15),
-                ),
-                */
-                Text(
-                  'キー：'
-                  '$_songKey',
-                  style: const TextStyle(fontSize: 15),
-                ),
-                Text(
-                  '拍子：'
-                  '$_songBeat',
-                  style: const TextStyle(fontSize: 15),
-                ),
-                Text(
-                  'ブルース：'
-                  '$_songIsBlues',
-                  style: const TextStyle(fontSize: 15),
-                ),
-                Text(
-                  '循環：'
-                  '$_songIdRhythmChange',
-                  style: const TextStyle(fontSize: 15),
-                ),
-                Text(
-                  'スタイル：'
-                  '$_songStyle',
-                  style: const TextStyle(fontSize: 15),
-                ),
-                */
                 const Text(
                   '',
                   style: TextStyle(fontSize: 5),
@@ -407,6 +391,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   '検索条件',
                   style: TextStyle(fontSize: 13),
                 ),
+                const Text(
+                  '',
+                  style: TextStyle(fontSize: 13),
+                ),
                 Row(children: [
                   const Text(
                     '巻：',
@@ -473,28 +461,78 @@ class _MyHomePageState extends State<MyHomePage> {
                         }),
                   ),
                 ]),
-                /*
                 Row(children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(85, 10),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                  const Text(
+                    '曲名：',
+                    style: TextStyle(fontSize: 13),
+                  ),
+                  Flexible(
+                    // ←追加SizedBox(
+                    child: TextField(
+                      style: const TextStyle(
+                        fontSize: 13 /*テキストのサイズ*/,
                       ),
-                    ),
-                    onPressed: () {
-                      _condVol = 0;
-                      _condStyle = '';
-                    },
-                    child: const Text(
-                      'クリア',
-                      style: TextStyle(
-                        fontSize: 12,
+                      controller: _controller,
+
+                      //maxLength: 20,
+                      maxLines: 1,
+                      decoration: InputDecoration(
+                        //icon: Icon(Icons.android),
+                        hintText: "(部分一致)",
+                        //labelText: "tweet",
+                        suffixIcon: IconButton(
+                          onPressed: () {
+                            _controller.clear();
+                            _condSongName = '';
+                          },
+                          icon: const Icon(
+                            Icons.clear,
+                            size: 13,
+                          ),
+                        ),
                       ),
+                      onChanged: (String txt) {
+                        _condSongName = txt;
+                      },
                     ),
                   ),
                 ]),
-                */
+                Row(children: [
+                  const Text(
+                    '作曲者名：',
+                    style: TextStyle(fontSize: 13),
+                  ),
+                  Flexible(
+                    // ←追加SizedBox(
+                    child: TextField(
+                      style: const TextStyle(
+                        fontSize: 13 /*テキストのサイズ*/,
+                      ),
+                      controller: _controller2,
+
+                      //maxLength: 20,
+                      maxLines: 1,
+                      decoration: InputDecoration(
+                        //icon: Icon(Icons.android),
+                        hintText: "(部分一致)",
+                        //labelText: "tweet",
+                        suffixIcon: IconButton(
+                          onPressed: () {
+                            _controller2.clear();
+                            _condCreaterName = '';
+                          },
+                          icon: const Icon(
+                            Icons.clear,
+                            size: 13,
+                          ),
+                        ),
+                      ),
+                      onChanged: (String txt) {
+                        _condCreaterName = txt;
+                      },
+                    ),
+                  ),
+                ]),
               ],
             ),
           ),
@@ -503,7 +541,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _choiceSong,
         tooltip: 'Choice',
         child: const Icon(Icons.search),
       ), // This trailing comma makes auto-formatting nicer for build methods.

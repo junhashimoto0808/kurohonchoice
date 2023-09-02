@@ -1,15 +1,5 @@
 List<List<String>> songData = [
-  [
-    '1',
-    'A Child Is Born',
-    'Thad Jones',
-    'Major',
-    'B♭',
-    '3/4',
-    'No',
-    'No',
-    'Waltz'
-  ],
+  ['1', 'A Child Is Born', 'Thad Jones', 'Major', 'B♭', '3/4', '-', 'Waltz'],
   [
     '1',
     'A Foggy Day',
@@ -17,8 +7,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -28,8 +17,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Latin'
   ],
   [
@@ -39,8 +27,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -50,44 +37,13 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Alice In Wonderland',
-    'Sammy Fain',
-    'Major',
-    'C',
-    '3/4',
-    'No',
-    'No',
-    'Waltz'
-  ],
-  ['1', 'All Blues', 'Miles Davis', 'Major', 'G', '3/4', 'No', 'No', 'Waltz'],
-  [
-    '1',
-    'All Of Me',
-    'Gerald Marks',
-    'Major',
-    'C',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
-  [
-    '1',
-    'All Of You',
-    'Cole Porter',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Alice In Wonderland', 'Sammy Fain', 'Major', 'C', '3/4', '-', 'Waltz'],
+  ['1', 'All Blues', 'Miles Davis', 'Major', 'G', '3/4', '-', 'Waltz'],
+  ['1', 'All Of Me', 'Gerald Marks', 'Major', 'C', '4/4', '-', 'Medium Swing'],
+  ['1', 'All Of You', 'Cole Porter', 'Major', 'E♭', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'All The Things You Are',
@@ -95,8 +51,7 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -106,8 +61,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -117,8 +71,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'Yes',
+    '循環',
     'Up Tempo Swing'
   ],
   [
@@ -128,8 +81,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -139,8 +91,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Up Tempo Swing'
   ],
   [
@@ -150,8 +101,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -161,8 +111,7 @@ List<List<String>> songData = [
     'Minor',
     'Gm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -172,21 +121,10 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
-  [
-    '1',
-    'Beatrice',
-    'Sam Rivers',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Beatrice', 'Sam Rivers', 'Major', 'F', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Beautiful Love',
@@ -194,8 +132,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -205,8 +142,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Up Tempo Swing'
   ],
   [
@@ -216,8 +152,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Up Swing'
   ],
   [
@@ -227,43 +162,12 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Black Orpheus',
-    'Luiz Bonfa',
-    'Minor',
-    'Am',
-    '4/4',
-    'No',
-    'No',
-    'Bossa Nova'
-  ],
-  [
-    '1',
-    'Blue Bossa',
-    'Kenny Dorham',
-    'Minor',
-    'Cm',
-    '4/4',
-    'No',
-    'No',
-    'Bossa Nova'
-  ],
-  [
-    '1',
-    'Blue In Green',
-    'Miles Davis',
-    'Minor',
-    'Dm',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['1', 'Black Orpheus', 'Luiz Bonfa', 'Minor', 'Am', '4/4', '-', 'Bossa Nova'],
+  ['1', 'Blue Bossa', 'Kenny Dorham', 'Minor', 'Cm', '4/4', '-', 'Bossa Nova'],
+  ['1', 'Blue In Green', 'Miles Davis', 'Minor', 'Dm', '4/4', '-', 'Ballad'],
   [
     '1',
     'Blue Monk',
@@ -271,8 +175,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
   [
@@ -282,8 +185,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '3/4',
-    'No',
-    'No',
+    '-',
     'Waltz'
   ],
   [
@@ -293,21 +195,10 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '1',
-    'Bolivia',
-    'Cedar Walton',
-    'Major',
-    'D',
-    '4/4',
-    'No',
-    'No',
-    'Up Tempo Swing'
-  ],
+  ['1', 'Bolivia', 'Cedar Walton', 'Major', 'D', '4/4', '-', 'Up Tempo Swing'],
   [
     '1',
     'But Not For Me',
@@ -315,8 +206,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -326,8 +216,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -337,21 +226,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
-  [
-    '1',
-    'Candy',
-    'Mack David',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Candy', 'Mack David', 'Major', 'B♭', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Cantaloupe Island',
@@ -359,22 +237,11 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Rock Pop'
   ],
-  ['1', 'Caravan', 'Duke Ellington', 'Minor', 'Fm', '4/4', 'No', 'No', 'Latin'],
-  [
-    '1',
-    'Cherokee',
-    'Ray Noble',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Up Tempo Swing'
-  ],
+  ['1', 'Caravan', 'Duke Ellington', 'Minor', 'Fm', '4/4', '-', 'Latin'],
+  ['1', 'Cherokee', 'Ray Noble', 'Major', 'B♭', '4/4', '-', 'Up Tempo Swing'],
   [
     '1',
     'Cheryl',
@@ -382,8 +249,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
   [
@@ -393,8 +259,7 @@ List<List<String>> songData = [
     'Minor',
     'A♭m',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -404,11 +269,10 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  ['1', 'Con Alma', 'Dizzy Gillespie', 'Major', 'C', '4/4', 'No', 'No', 'Afro'],
+  ['1', 'Con Alma', 'Dizzy Gillespie', 'Major', 'C', '4/4', '-', 'Afro'],
   [
     '1',
     'Confirmation',
@@ -416,8 +280,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -427,11 +290,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
-  ['1', 'Cute', 'Neal Hefti', 'Major', 'C', '4/4', 'No', 'No', 'Medium Swing'],
+  ['1', 'Cute', 'Neal Hefti', 'Major', 'C', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Daahoud',
@@ -439,21 +301,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Day By Day',
-    'Paul Weston',
-    'Major',
-    'G',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Day By Day', 'Paul Weston', 'Major', 'G', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Days Of Wine And Roses',
@@ -461,8 +312,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -472,8 +322,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -483,8 +332,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -494,33 +342,12 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Doxy',
-    'Sonny Rollins',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
-  [
-    '1',
-    'Easy Living',
-    'Ralph Rainger',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
-  ['1', 'Emily', 'Johnny Mandel', 'Major', 'C', '3/4', 'No', 'No', 'Waltz'],
+  ['1', 'Doxy', 'Sonny Rollins', 'Major', 'B♭', '4/4', '-', 'Medium Swing'],
+  ['1', 'Easy Living', 'Ralph Rainger', 'Major', 'F', '4/4', '-', 'Ballad'],
+  ['1', 'Emily', 'Johnny Mandel', 'Major', 'C', '3/4', '-', 'Waltz'],
   [
     '1',
     'Everything Happens To Me',
@@ -528,8 +355,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -539,8 +365,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -550,8 +375,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '3/4',
-    'No',
-    'No',
+    '-',
     'Waltz'
   ],
   [
@@ -561,8 +385,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Rock Pop'
   ],
   [
@@ -572,21 +395,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '1',
-    'Footprints',
-    'Wayne Shorter',
-    'Minor',
-    'Cm',
-    '3/4',
-    'Yes',
-    'No',
-    'Waltz'
-  ],
+  ['1', 'Footprints', 'Wayne Shorter', 'Minor', 'Cm', '3/4', 'Blues', 'Waltz'],
   [
     '1',
     'Forest Flower',
@@ -594,21 +406,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
-  [
-    '1',
-    'Four',
-    'Miles Davis',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Up Tempo Swing'
-  ],
+  ['1', 'Four', 'Miles Davis', 'Major', 'E♭', '4/4', '-', 'Up Tempo Swing'],
   [
     '1',
     'Four On Six',
@@ -616,8 +417,7 @@ List<List<String>> songData = [
     'Minor',
     'Gm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -627,8 +427,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -638,8 +437,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Slow Swing'
   ],
   [
@@ -649,21 +447,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Good Bait',
-    'Tadd Dameron',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Good Bait', 'Tadd Dameron', 'Major', 'B♭', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Groovin\' High',
@@ -671,8 +458,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -682,8 +468,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -693,8 +478,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -704,8 +488,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -715,8 +498,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -726,8 +508,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -737,8 +518,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -748,8 +528,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -759,8 +538,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -770,8 +548,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -781,8 +558,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -792,8 +568,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -803,8 +578,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -814,8 +588,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -825,8 +598,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -836,8 +608,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -847,8 +618,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -858,8 +628,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -869,8 +638,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -880,8 +648,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -891,8 +658,7 @@ List<List<String>> songData = [
     'Minor',
     'Gm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -902,8 +668,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -913,8 +678,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -924,8 +688,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -935,8 +698,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -946,8 +708,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -957,8 +718,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -968,8 +728,7 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -979,8 +738,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -990,8 +748,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1001,8 +758,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -1012,8 +768,7 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
   [
@@ -1023,21 +778,10 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Even 8ths'
   ],
-  [
-    '1',
-    'Israel',
-    'John Carisi',
-    'Minor',
-    'Dm',
-    '4/4',
-    'Yes',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Israel', 'John Carisi', 'Minor', 'Dm', '4/4', 'Blues', 'Medium Swing'],
   [
     '1',
     'It Could Happen To You',
@@ -1045,8 +789,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1056,8 +799,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -1067,8 +809,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1078,8 +819,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -1089,8 +829,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1100,21 +839,10 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Jordu',
-    'Duke Jordan',
-    'Minor',
-    'Cm',
-    '4/4',
-    'No',
-    'No',
-    'Up Tempo Swing'
-  ],
+  ['1', 'Jordu', 'Duke Jordan', 'Minor', 'Cm', '4/4', '-', 'Up Tempo Swing'],
   [
     '1',
     'Joy Spring',
@@ -1122,8 +850,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -1133,8 +860,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1144,8 +870,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -1155,8 +880,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -1166,21 +890,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Lament',
-    'J. J. Johnson',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Up Tempo Swing'
-  ],
+  ['1', 'Lament', 'J. J. Johnson', 'Major', 'F', '4/4', '-', 'Up Tempo Swing'],
   [
     '1',
     'Lazy Bird',
@@ -1188,21 +901,10 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Left Alone',
-    'Mal Waldron',
-    'Minor',
-    'Dm',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['1', 'Left Alone', 'Mal Waldron', 'Minor', 'Dm', '4/4', '-', 'Ballad'],
   [
     '1',
     'Like Someone In Love',
@@ -1210,8 +912,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1221,21 +922,10 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '3/4',
-    'No',
-    'No',
+    '-',
     'Waltz'
   ],
-  [
-    '1',
-    'L-O-V-E',
-    'Bert Kaempfert',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'L-O-V-E', 'Bert Kaempfert', 'Major', 'F', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Love For Sale',
@@ -1243,32 +933,11 @@ List<List<String>> songData = [
     'Minor',
     'B♭m',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
-  [
-    '1',
-    'Love Letters',
-    'Victor Young',
-    'Major',
-    'G',
-    '4/4',
-    'No',
-    'No',
-    'Rhumba'
-  ],
-  [
-    '1',
-    'Lover Man',
-    'Roger "Ram" Ramirez',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['1', 'Love Letters', 'Victor Young', 'Major', 'G', '4/4', '-', 'Rhumba'],
+  ['1', 'Lover Man', 'Roger "Ram" Ramirez', 'Major', 'F', '4/4', '-', 'Ballad'],
   [
     '1',
     'Lover, Come Back To Me!',
@@ -1276,8 +945,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -1287,8 +955,7 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1298,8 +965,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Even 8ths'
   ],
   [
@@ -1309,21 +975,10 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Moanin\'',
-    'Bobby Timmons',
-    'Minor',
-    'Fm',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Moanin\'', 'Bobby Timmons', 'Minor', 'Fm', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Moment\'s Notice',
@@ -1331,21 +986,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Moritat',
-    'Kurt Weill',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Moritat', 'Kurt Weill', 'Major', 'B♭', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Mr.P.C.',
@@ -1353,8 +997,7 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Up Tempo Swing'
   ],
   [
@@ -1364,8 +1007,7 @@ List<List<String>> songData = [
     'Minor',
     'Em',
     '3/4',
-    'No',
-    'No',
+    '-',
     'Waltz'
   ],
   [
@@ -1375,8 +1017,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -1386,8 +1027,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -1397,8 +1037,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Latin'
   ],
   [
@@ -1408,8 +1047,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -1419,33 +1057,12 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  ['1', 'Naima', 'John Coltrane', 'Major', 'A♭', '4/4', 'No', 'No', 'Ballad'],
-  [
-    '1',
-    'Nardis',
-    'Miles Davis',
-    'Minor',
-    'Em',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
-  [
-    '1',
-    'Nica\'s Dream',
-    'Horace Silver',
-    'Minor',
-    'B♭m',
-    '4/4',
-    'No',
-    'No',
-    'Latin'
-  ],
+  ['1', 'Naima', 'John Coltrane', 'Major', 'A♭', '4/4', '-', 'Ballad'],
+  ['1', 'Nardis', 'Miles Davis', 'Minor', 'Em', '4/4', '-', 'Medium Swing'],
+  ['1', 'Nica\'s Dream', 'Horace Silver', 'Minor', 'B♭m', '4/4', '-', 'Latin'],
   [
     '1',
     'Night And Day',
@@ -1453,8 +1070,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1464,8 +1080,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
   [
@@ -1475,32 +1090,11 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '1',
-    'Old Folks',
-    'Willard Robison',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
-  [
-    '1',
-    'Oleo',
-    'Sonny Rollins',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'Yes',
-    'Up Tempo Swing'
-  ],
+  ['1', 'Old Folks', 'Willard Robison', 'Major', 'F', '4/4', '-', 'Ballad'],
+  ['1', 'Oleo', 'Sonny Rollins', 'Major', 'B♭', '4/4', '循環', 'Up Tempo Swing'],
   [
     '1',
     'On A Clear Day',
@@ -1508,8 +1102,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1519,8 +1112,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -1530,8 +1122,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1541,8 +1132,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -1552,8 +1142,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -1563,8 +1152,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -1574,8 +1162,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1585,8 +1172,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1596,11 +1182,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  ['1', 'Peace', 'Horace Silver', 'Major', 'B♭', '4/4', 'No', 'No', 'Ballad'],
+  ['1', 'Peace', 'Horace Silver', 'Major', 'B♭', '4/4', '-', 'Ballad'],
   [
     '1',
     'Pent Up House',
@@ -1608,11 +1193,10 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  ['1', 'Perdido', 'Juan Tizol', 'Major', 'B♭', '4/4', 'No', 'No', 'Latin'],
+  ['1', 'Perdido', 'Juan Tizol', 'Major', 'B♭', '4/4', '-', 'Latin'],
   [
     '1',
     'Polka Dots And Moonbeams',
@@ -1620,8 +1204,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -1631,8 +1214,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -1642,21 +1224,10 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
-  [
-    '1',
-    'Recorda-Me',
-    'Joe Henderson',
-    'Minor',
-    'Am',
-    '4/4',
-    'No',
-    'No',
-    'Bossa Nova'
-  ],
+  ['1', 'Recorda-Me', 'Joe Henderson', 'Minor', 'Am', '4/4', '-', 'Bossa Nova'],
   [
     '1',
     'Rhythm-A-Ning',
@@ -1664,8 +1235,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'Yes',
+    '循環',
     'Medium Up Swing'
   ],
   [
@@ -1675,21 +1245,10 @@ List<List<String>> songData = [
     'Minor',
     'E♭m',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '1',
-    'Samba De Orfeu',
-    'Luiz Bonfa',
-    'Major',
-    'C',
-    '4/4',
-    'No',
-    'No',
-    'Bossa Nova'
-  ],
+  ['1', 'Samba De Orfeu', 'Luiz Bonfa', 'Major', 'C', '4/4', '-', 'Bossa Nova'],
   [
     '1',
     'Satin Doll',
@@ -1697,8 +1256,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1708,21 +1266,10 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Secret Love',
-    'Sammy Fain',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['1', 'Secret Love', 'Sammy Fain', 'Major', 'E♭', '4/4', '-', 'Ballad'],
   [
     '1',
     'Seven Steps To Heaven',
@@ -1730,8 +1277,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -1741,8 +1287,7 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1752,21 +1297,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '1',
-    'So What',
-    'Miles Davis',
-    'Minor',
-    'Dm',
-    '4/4',
-    'No',
-    'No',
-    'Up Tempo Swing'
-  ],
+  ['1', 'So What', 'Miles Davis', 'Minor', 'Dm', '4/4', '-', 'Up Tempo Swing'],
   [
     '1',
     'Softly, As In A Morning Sunrise',
@@ -1774,21 +1308,10 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '1',
-    'Solar',
-    'Miles Davis',
-    'Minor',
-    'Cm',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Solar', 'Miles Davis', 'Minor', 'Cm', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Some Other Blues',
@@ -1796,8 +1319,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Up Swing'
   ],
   [
@@ -1807,8 +1329,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '3/4',
-    'No',
-    'No',
+    '-',
     'Waltz'
   ],
   [
@@ -1818,8 +1339,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -1829,8 +1349,7 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Latin'
   ],
   [
@@ -1840,8 +1359,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Up Swing'
   ],
   [
@@ -1851,22 +1369,11 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  ['1', 'Spain', 'Chick Corea', 'Minor', 'Bm', '4/4', 'No', 'No', 'Latin'],
-  [
-    '1',
-    'Speak Low',
-    'Kurt Weill',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['1', 'Spain', 'Chick Corea', 'Minor', 'Bm', '4/4', '-', 'Latin'],
+  ['1', 'Speak Low', 'Kurt Weill', 'Major', 'F', '4/4', '-', 'Medium Swing'],
   [
     '1',
     'Spring Can Really Hang You Up The Most',
@@ -1874,21 +1381,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '1',
-    'St. Thomas',
-    'Sonny Rollins',
-    'Major',
-    'C',
-    '4/4',
-    'No',
-    'No',
-    'Latin'
-  ],
+  ['1', 'St. Thomas', 'Sonny Rollins', 'Major', 'C', '4/4', '-', 'Latin'],
   [
     '1',
     'Stablemates',
@@ -1896,32 +1392,11 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '1',
-    'Star Eyes',
-    'Gene DePaul',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
-  [
-    '1',
-    'Stardust',
-    'Hoagy Carmichael',
-    'Major',
-    'D♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['1', 'Star Eyes', 'Gene DePaul', 'Major', 'E♭', '4/4', '-', 'Medium Swing'],
+  ['1', 'Stardust', 'Hoagy Carmichael', 'Major', 'D♭', '4/4', '-', 'Ballad'],
   [
     '1',
     'Stella By Starlight',
@@ -1929,8 +1404,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1940,8 +1414,7 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
   [
@@ -1951,8 +1424,7 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1962,8 +1434,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Up Swing'
   ],
   [
@@ -1973,8 +1444,7 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -1984,8 +1454,7 @@ List<List<String>> songData = [
     'Minor',
     'Am',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Slow Swing'
   ],
   [
@@ -1995,8 +1464,7 @@ List<List<String>> songData = [
     'Minor',
     'E♭m',
     '5/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2006,8 +1474,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2017,8 +1484,7 @@ List<List<String>> songData = [
     'Major',
     'D',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Funk'
   ],
   [
@@ -2028,32 +1494,11 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Up Swing'
   ],
-  [
-    '1',
-    'The Chicken',
-    'Alfred Ellis',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Funk'
-  ],
-  [
-    '1',
-    'The Christmas Song',
-    'Mel Torme',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['1', 'The Chicken', 'Alfred Ellis', 'Major', 'B♭', '4/4', '-', 'Funk'],
+  ['1', 'The Christmas Song', 'Mel Torme', 'Major', 'E♭', '4/4', '-', 'Ballad'],
   [
     '1',
     'The Girl From Ipanema',
@@ -2061,8 +1506,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -2072,8 +1516,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Latin'
   ],
   [
@@ -2083,8 +1526,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -2094,8 +1536,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -2105,8 +1546,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2116,8 +1556,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2127,11 +1566,10 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '3/4',
-    'No',
-    'No',
+    '-',
     'Waltz'
   ],
-  ['1', 'Very Early', 'Bill Evans', 'Major', 'C', '3/4', 'No', 'No', 'Waltz'],
+  ['1', 'Very Early', 'Bill Evans', 'Major', 'C', '3/4', '-', 'Waltz'],
   [
     '1',
     'Walkin\'',
@@ -2139,21 +1577,10 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'Waltz For Debby',
-    'Bill Evans',
-    'Major',
-    'F',
-    '3/4',
-    'No',
-    'No',
-    'Waltz'
-  ],
+  ['1', 'Waltz For Debby', 'Bill Evans', 'Major', 'F', '3/4', '-', 'Waltz'],
   [
     '1',
     'Watermelon Man',
@@ -2161,21 +1588,10 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Even 8ths'
   ],
-  [
-    '1',
-    'Wave',
-    'Antonio Carlos Jobim',
-    'Major',
-    'D',
-    '4/4',
-    'No',
-    'No',
-    'Bossa Nova'
-  ],
+  ['1', 'Wave', 'Antonio Carlos Jobim', 'Major', 'D', '4/4', '-', 'Bossa Nova'],
   [
     '1',
     'Well, You Needn\'t',
@@ -2183,8 +1599,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2194,8 +1609,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2205,8 +1619,7 @@ List<List<String>> songData = [
     'Minor',
     'Am',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2216,21 +1629,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '1',
-    'What\'s New?',
-    'Bob Haggart',
-    'Major',
-    'C',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['1', 'What\'s New?', 'Bob Haggart', 'Major', 'C', '4/4', '-', 'Ballad'],
   [
     '1',
     'When I Fall In Love',
@@ -2238,8 +1640,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2249,8 +1650,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2260,8 +1660,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2271,8 +1670,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2282,8 +1680,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2293,8 +1690,7 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -2304,8 +1700,7 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2315,8 +1710,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2326,8 +1720,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -2337,8 +1730,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2348,8 +1740,7 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2359,8 +1750,7 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2370,8 +1760,7 @@ List<List<String>> songData = [
     'Minor',
     'Bm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2381,8 +1770,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2392,8 +1780,7 @@ List<List<String>> songData = [
     'Minor',
     'Gm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2403,8 +1790,7 @@ List<List<String>> songData = [
     'Minor',
     'Em',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -2414,21 +1800,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'A Time For Love',
-    'Johnny Mandel',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'A Time For Love', 'Johnny Mandel', 'Major', 'F', '4/4', '-', 'Ballad'],
   [
     '2',
     'A Weaver Of Dreams',
@@ -2436,8 +1811,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2447,32 +1821,11 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'Affirmation',
-    'Jose Feliciano',
-    'Minor',
-    'Bm',
-    '4/4',
-    'No',
-    'No',
-    'Funk'
-  ],
-  [
-    '2',
-    'Afro Blue',
-    'Mongo Santamaria',
-    'Minor',
-    'Fm',
-    '3/4',
-    'No',
-    'No',
-    'Waltz'
-  ],
+  ['2', 'Affirmation', 'Jose Feliciano', 'Minor', 'Bm', '4/4', '-', 'Funk'],
+  ['2', 'Afro Blue', 'Mongo Santamaria', 'Minor', 'Fm', '3/4', '-', 'Waltz'],
   [
     '2',
     'Agua De Beber',
@@ -2480,8 +1833,7 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -2491,8 +1843,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2502,8 +1853,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2513,43 +1863,12 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'Ana Maria',
-    'Wayne Shorter',
-    'Major',
-    'G',
-    '4/4',
-    'No',
-    'No',
-    'Even 8ths'
-  ],
-  [
-    '2',
-    'Angel Eyes',
-    'Matt Dennis',
-    'Minor',
-    'Cm',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
-  [
-    '2',
-    'Armando\'s Rhumba',
-    'Chick Corea',
-    'Minor',
-    'Cm',
-    '4/4',
-    'No',
-    'No',
-    'Latin'
-  ],
+  ['2', 'Ana Maria', 'Wayne Shorter', 'Major', 'G', '4/4', '-', 'Even 8ths'],
+  ['2', 'Angel Eyes', 'Matt Dennis', 'Minor', 'Cm', '4/4', '-', 'Ballad'],
+  ['2', 'Armando\'s Rhumba', 'Chick Corea', 'Minor', 'Cm', '4/4', '-', 'Latin'],
   [
     '2',
     'As Time Goes By',
@@ -2557,21 +1876,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'Ask Me Now',
-    'Thelonious Monk',
-    'Major',
-    'D♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Ask Me Now', 'Thelonious Monk', 'Major', 'D♭', '4/4', '-', 'Ballad'],
   [
     '2',
     'Bebop',
@@ -2579,8 +1887,7 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -2590,8 +1897,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2601,8 +1907,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2612,8 +1917,7 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -2623,21 +1927,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
-  [
-    '2',
-    'Black Coffee',
-    'Sonny Burke',
-    'Major',
-    'D♭',
-    '4/4',
-    'No',
-    'No',
-    'Slow Swing'
-  ],
+  ['2', 'Black Coffee', 'Sonny Burke', 'Major', 'D♭', '4/4', '-', 'Slow Swing'],
   [
     '2',
     'Blame It On My Youth',
@@ -2645,8 +1938,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2656,8 +1948,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2667,8 +1958,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
   [
@@ -2678,8 +1968,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Up Swing'
   ],
   [
@@ -2689,8 +1978,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -2700,8 +1988,7 @@ List<List<String>> songData = [
     'Major',
     'D',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Even 8ths'
   ],
   [
@@ -2711,8 +1998,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2722,21 +2008,10 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'Bye-Ya',
-    'Thelonious Monk',
-    'Major',
-    'A♭',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['2', 'Bye-Ya', 'Thelonious Monk', 'Major', 'A♭', '4/4', '-', 'Medium Swing'],
   [
     '2',
     'Central Park West',
@@ -2744,8 +2019,7 @@ List<List<String>> songData = [
     'Major',
     'B',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2755,8 +2029,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2766,21 +2039,10 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'Come Sunday',
-    'Duke Ellington',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Come Sunday', 'Duke Ellington', 'Major', 'B♭', '4/4', '-', 'Ballad'],
   [
     '2',
     'Cool Struttin\'',
@@ -2788,8 +2050,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
   [
@@ -2799,8 +2060,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'Yes',
+    '循環',
     'Up Tempo Swing'
   ],
   [
@@ -2810,8 +2070,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -2821,8 +2080,7 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Up Swing'
   ],
   [
@@ -2832,21 +2090,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'Danny Boy',
-    'Traditional',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['2', 'Danny Boy', 'Traditional', 'Major', 'E♭', '4/4', '-', 'Medium Swing'],
   [
     '2',
     'Darn That Dream',
@@ -2854,32 +2101,11 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'Dat Dere',
-    'Bobby Timmons',
-    'Minor',
-    'Cm',
-    '4/4',
-    'No',
-    'No',
-    'Slow Swing'
-  ],
-  [
-    '2',
-    'Day Dream',
-    'Duke Ellington',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Dat Dere', 'Bobby Timmons', 'Minor', 'Cm', '4/4', '-', 'Slow Swing'],
+  ['2', 'Day Dream', 'Duke Ellington', 'Major', 'F', '4/4', '-', 'Ballad'],
   [
     '2',
     'Del Sasser',
@@ -2887,8 +2113,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -2898,8 +2123,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -2909,8 +2133,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'Yes',
+    '循環',
     'Medium Up Swing'
   ],
   [
@@ -2920,8 +2143,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -2931,8 +2153,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -2942,8 +2163,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -2953,32 +2173,11 @@ List<List<String>> songData = [
     'Minor',
     'Gm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'Eighty One',
-    'Miles Davis',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Even 8ths'
-  ],
-  [
-    '2',
-    'El Gaucho',
-    'Wayne Shorter',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Bossa Nova'
-  ],
+  ['2', 'Eighty One', 'Miles Davis', 'Major', 'F', '4/4', '-', 'Even 8ths'],
+  ['2', 'El Gaucho', 'Wayne Shorter', 'Major', 'F', '4/4', '-', 'Bossa Nova'],
   [
     '2',
     'Embraceable You',
@@ -2986,8 +2185,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -2997,43 +2195,12 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'Eronel',
-    'Thelonious Monk',
-    'Major',
-    'G',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
-  [
-    '2',
-    'Estate',
-    'Bruno Martino',
-    'Minor',
-    'Bm',
-    '4/4',
-    'No',
-    'No',
-    'Bossa Nova'
-  ],
-  [
-    '2',
-    'Farmer\'s Trust',
-    'Pat Metheny',
-    'Major',
-    'C',
-    '3/4',
-    'No',
-    'No',
-    'Waltz'
-  ],
+  ['2', 'Eronel', 'Thelonious Monk', 'Major', 'G', '4/4', '-', 'Medium Swing'],
+  ['2', 'Estate', 'Bruno Martino', 'Minor', 'Bm', '4/4', '-', 'Bossa Nova'],
+  ['2', 'Farmer\'s Trust', 'Pat Metheny', 'Major', 'C', '3/4', '-', 'Waltz'],
   [
     '2',
     'Fascinating Rhythm',
@@ -3041,8 +2208,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -3052,8 +2218,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3063,21 +2228,10 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '2',
-    'First Song',
-    'Charlie Haden',
-    'Minor',
-    'Cm',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'First Song', 'Charlie Haden', 'Minor', 'Cm', '4/4', '-', 'Ballad'],
   [
     '2',
     'Five Spot After Dark',
@@ -3085,11 +2239,10 @@ List<List<String>> songData = [
     'Minor',
     'Bm',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
-  ['2', 'Flamingo', 'Ted Grouya', 'Major', 'F', '4/4', 'No', 'No', 'Ballad'],
+  ['2', 'Flamingo', 'Ted Grouya', 'Major', 'F', '4/4', '-', 'Ballad'],
   [
     '2',
     'For All We Know',
@@ -3097,8 +2250,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3108,8 +2260,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3119,8 +2270,7 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -3130,8 +2280,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Funk'
   ],
   [
@@ -3141,8 +2290,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3152,8 +2300,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Slow Swing'
   ],
   [
@@ -3163,8 +2310,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3174,8 +2320,7 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3185,8 +2330,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3196,8 +2340,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3207,8 +2350,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -3218,8 +2360,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3229,8 +2370,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -3240,8 +2380,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -3251,21 +2390,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  [
-    '2',
-    'Hush-A-Bye',
-    'Sammy Fain',
-    'Minor',
-    'Fm',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['2', 'Hush-A-Bye', 'Sammy Fain', 'Minor', 'Fm', '4/4', '-', 'Medium Swing'],
   [
     '2',
     'I Got It Bad And That Ain\'t Good',
@@ -3273,8 +2401,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Swing Two-Four'
   ],
   [
@@ -3284,8 +2411,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'Yes',
+    '循環',
     'Up Tempo Swing'
   ],
   [
@@ -3295,8 +2421,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3306,8 +2431,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3317,8 +2441,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3328,8 +2451,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3339,8 +2461,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3350,8 +2471,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3361,21 +2481,10 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'I Wish I Knew',
-    'Harry Warren',
-    'Major',
-    'G',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'I Wish I Knew', 'Harry Warren', 'Major', 'G', '4/4', '-', 'Ballad'],
   [
     '2',
     'I\'m A Fool To Want You',
@@ -3383,8 +2492,7 @@ List<List<String>> songData = [
     'Minor',
     'Em',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3394,8 +2502,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3405,8 +2512,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3416,8 +2522,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3427,8 +2532,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3438,8 +2542,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3449,21 +2552,10 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
-  [
-    '2',
-    'Infant Eyes',
-    'Wayne Shorter',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Infant Eyes', 'Wayne Shorter', 'Major', 'E♭', '4/4', '-', 'Ballad'],
   [
     '2',
     'Isn\'t It Romantic?',
@@ -3471,21 +2563,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'Isn\'t She Lovely',
-    'Stevie Wonder',
-    'Major',
-    'F',
-    '4/4',
-    'No',
-    'No',
-    'Pop'
-  ],
+  ['2', 'Isn\'t She Lovely', 'Stevie Wonder', 'Major', 'F', '4/4', '-', 'Pop'],
   [
     '2',
     'It Never Entered My Mind',
@@ -3493,8 +2574,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3504,8 +2584,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3515,8 +2594,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3526,11 +2604,10 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  ['2', 'James', 'Pat Metheny', 'Major', 'D', '4/4', 'No', 'No', 'Bossa Nova'],
+  ['2', 'James', 'Pat Metheny', 'Major', 'D', '4/4', '-', 'Bossa Nova'],
   [
     '2',
     'Just In Time',
@@ -3538,8 +2615,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -3549,23 +2625,12 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  ['2', 'La Fiesta', 'Chick Corea', 'Major', 'A', '6/8', 'No', 'No', 'Latin'],
-  ['2', 'Laura', 'David Raksin', 'Major', 'C', '4/4', 'No', 'No', 'Ballad'],
-  [
-    '2',
-    'Litha',
-    'Chick Corea',
-    'Major',
-    'D',
-    '6/8',
-    'No',
-    'No',
-    'Up Tempo Swing'
-  ],
+  ['2', 'La Fiesta', 'Chick Corea', 'Major', 'A', '6/8', '-', 'Latin'],
+  ['2', 'Laura', 'David Raksin', 'Major', 'C', '4/4', '-', 'Ballad'],
+  ['2', 'Litha', 'Chick Corea', 'Major', 'D', '6/8', '-', 'Up Tempo Swing'],
   [
     '2',
     'Little Sunflower',
@@ -3573,34 +2638,13 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Even 8ths'
   ],
-  [
-    '2',
-    'Lush Life',
-    'Billy Strayhorn',
-    'Major',
-    'D♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
-  ['2', 'Mambo Inn', 'Grace Sampson', 'Major', 'F', '4/4', 'No', 'No', 'Latin'],
-  [
-    '2',
-    'Manteca',
-    'Dizzy Gillespie',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Latin'
-  ],
-  ['2', 'Mas Que Nada', 'Jorge Ben', 'Minor', 'Fm', '4/4', 'No', 'No', 'Latin'],
+  ['2', 'Lush Life', 'Billy Strayhorn', 'Major', 'D♭', '4/4', '-', 'Ballad'],
+  ['2', 'Mambo Inn', 'Grace Sampson', 'Major', 'F', '4/4', '-', 'Latin'],
+  ['2', 'Manteca', 'Dizzy Gillespie', 'Major', 'B♭', '4/4', '-', 'Latin'],
+  ['2', 'Mas Que Nada', 'Jorge Ben', 'Minor', 'Fm', '4/4', '-', 'Latin'],
   [
     '2',
     'Mean To Me',
@@ -3608,8 +2652,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3619,21 +2662,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
-  [
-    '2',
-    'Memories Of You',
-    'Andy Razaf',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Memories Of You', 'Andy Razaf', 'Major', 'E♭', '4/4', '-', 'Ballad'],
   [
     '2',
     'Mercy, Mercy, Mercy',
@@ -3641,21 +2673,10 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Funk'
   ],
-  [
-    '2',
-    'Midnight Mood',
-    'Josef Zawinul',
-    'Major',
-    'D♭',
-    '3/4',
-    'No',
-    'No',
-    'Waltz'
-  ],
+  ['2', 'Midnight Mood', 'Josef Zawinul', 'Major', 'D♭', '3/4', '-', 'Waltz'],
   [
     '2',
     'Misterioso',
@@ -3663,21 +2684,10 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'Mona Lisa',
-    'Jay Livingston',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Mona Lisa', 'Jay Livingston', 'Major', 'E♭', '4/4', '-', 'Ballad'],
   [
     '2',
     'Monk\'s Dream',
@@ -3685,43 +2695,12 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'Monk\'s Mood',
-    'Thelonious Monk',
-    'Major',
-    'D♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
-  [
-    '2',
-    'Mood Indigo',
-    'Duke Ellington',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
-  [
-    '2',
-    'Moon River',
-    'Henry Mancini',
-    'Major',
-    'C',
-    '3/4',
-    'No',
-    'No',
-    'Waltz'
-  ],
+  ['2', 'Monk\'s Mood', 'Thelonious Monk', 'Major', 'D♭', '4/4', '-', 'Ballad'],
+  ['2', 'Mood Indigo', 'Duke Ellington', 'Major', 'B♭', '4/4', '-', 'Ballad'],
+  ['2', 'Moon River', 'Henry Mancini', 'Major', 'C', '3/4', '-', 'Waltz'],
   [
     '2',
     'Moonlight In Vermont',
@@ -3729,8 +2708,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3740,8 +2718,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3751,8 +2728,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'Yes',
+    '循環',
     'Up Tempo Swing'
   ],
   [
@@ -3762,21 +2738,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'My Ideal',
-    'Richard A. Whiting',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'My Ideal', 'Richard A. Whiting', 'Major', 'E♭', '4/4', '-', 'Ballad'],
   [
     '2',
     'My Shining Hour',
@@ -3784,11 +2749,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  ['2', 'My Ship', 'Kurt Weill', 'Major', 'F', '4/4', 'No', 'No', 'Ballad'],
+  ['2', 'My Ship', 'Kurt Weill', 'Major', 'F', '4/4', '-', 'Ballad'],
   [
     '2',
     'Nancy',
@@ -3796,21 +2760,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'Nefertiti',
-    'Wayne Shorter',
-    'Major',
-    'A♭',
-    '4/4',
-    'No',
-    'No',
-    'Slow Swing'
-  ],
+  ['2', 'Nefertiti', 'Wayne Shorter', 'Major', 'A♭', '4/4', '-', 'Slow Swing'],
   [
     '2',
     'Never Let Me Go',
@@ -3818,8 +2771,7 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -3829,8 +2781,7 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3840,8 +2791,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -3851,8 +2801,7 @@ List<List<String>> songData = [
     'Minor',
     'Gm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -3862,8 +2811,7 @@ List<List<String>> songData = [
     'Minor',
     'Am',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -3873,8 +2821,7 @@ List<List<String>> songData = [
     'Minor',
     'Gm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3884,8 +2831,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Slow Swing'
   ],
   [
@@ -3895,8 +2841,7 @@ List<List<String>> songData = [
     'Minor',
     'Gm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
   [
@@ -3906,8 +2851,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -3917,21 +2861,10 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Latin'
   ],
-  [
-    '2',
-    'Pannonica',
-    'Thelonious Monk',
-    'Major',
-    'C',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Pannonica', 'Thelonious Monk', 'Major', 'C', '4/4', '-', 'Ballad'],
   [
     '2',
     'Passion Dance',
@@ -3939,8 +2872,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -3950,8 +2882,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -3961,11 +2892,10 @@ List<List<String>> songData = [
     'Minor',
     'E♭m',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  ['2', 'Poinciana', 'Nat Simon', 'Major', 'D', '4/4', 'No', 'No', 'Latin'],
+  ['2', 'Poinciana', 'Nat Simon', 'Major', 'D', '4/4', '-', 'Latin'],
   [
     '2',
     'Prince Of Darkness',
@@ -3973,32 +2903,11 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
-  [
-    '2',
-    'Quiet Now',
-    'Denny Zeitlin',
-    'Major',
-    'C',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
-  [
-    '2',
-    'Reflections',
-    'Thelonious Monk',
-    'Major',
-    'A♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Quiet Now', 'Denny Zeitlin', 'Major', 'C', '4/4', '-', 'Ballad'],
+  ['2', 'Reflections', 'Thelonious Monk', 'Major', 'A♭', '4/4', '-', 'Ballad'],
   [
     '2',
     'Relaxin\' At Camarillo',
@@ -4006,21 +2915,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Up Tempo Swing'
   ],
-  [
-    '2',
-    'Road Song',
-    'Wes Montgomery',
-    'Minor',
-    'Gm',
-    '4/4',
-    'No',
-    'No',
-    'Latin'
-  ],
+  ['2', 'Road Song', 'Wes Montgomery', 'Minor', 'Gm', '4/4', '-', 'Latin'],
   [
     '2',
     'Robbin\'s Nest',
@@ -4028,8 +2926,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4039,22 +2936,11 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  ['2', 'Say It', 'Jimmy McHugh', 'Major', 'E♭', '4/4', 'No', 'No', 'Ballad'],
-  [
-    '2',
-    'Sea Journey',
-    'Chick Corea',
-    'Minor',
-    'Am',
-    '4/4',
-    'No',
-    'No',
-    'Latin'
-  ],
+  ['2', 'Say It', 'Jimmy McHugh', 'Major', 'E♭', '4/4', '-', 'Ballad'],
+  ['2', 'Sea Journey', 'Chick Corea', 'Minor', 'Am', '4/4', '-', 'Latin'],
   [
     '2',
     'Sentimental Journey',
@@ -4062,8 +2948,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4073,8 +2958,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4084,22 +2968,11 @@ List<List<String>> songData = [
     'Major',
     'G',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
-  [
-    '2',
-    'Skylark',
-    'Hoagy Carmichael',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
-  ['2', 'Smile', 'Charles Chaplin', 'Major', 'F', '4/4', 'No', 'No', 'Ballad'],
+  ['2', 'Skylark', 'Hoagy Carmichael', 'Major', 'E♭', '4/4', '-', 'Ballad'],
+  ['2', 'Smile', 'Charles Chaplin', 'Major', 'F', '4/4', '-', 'Ballad'],
   [
     '2',
     'So In Love',
@@ -4107,8 +2980,7 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -4118,21 +2990,10 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
-  [
-    '2',
-    'Solitude',
-    'Duke Ellington',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Solitude', 'Duke Ellington', 'Major', 'E♭', '4/4', '-', 'Ballad'],
   [
     '2',
     'Somebody Loves Me',
@@ -4140,21 +3001,10 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'Sometime Ago',
-    'Sergio Mihanovich',
-    'Major',
-    'C',
-    '3/4',
-    'No',
-    'No',
-    'Waltz'
-  ],
+  ['2', 'Sometime Ago', 'Sergio Mihanovich', 'Major', 'C', '3/4', '-', 'Waltz'],
   [
     '2',
     'Song For Bilbao',
@@ -4162,22 +3012,11 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4,3/4',
-    'No',
-    'No',
+    '-',
     'Even 8ths'
   ],
-  ['2', 'Soul Eyes', 'Mal Waldron', 'Major', 'E♭', '4/4', 'No', 'No', 'Ballad'],
-  [
-    '2',
-    'Soultrane',
-    'Tadd Dameron',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
+  ['2', 'Soul Eyes', 'Mal Waldron', 'Major', 'E♭', '4/4', '-', 'Ballad'],
+  ['2', 'Soultrane', 'Tadd Dameron', 'Major', 'E♭', '4/4', '-', 'Ballad'],
   [
     '2',
     'Speak No Evil',
@@ -4185,8 +3024,7 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4196,8 +3034,7 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -4207,8 +3044,7 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4218,8 +3054,7 @@ List<List<String>> songData = [
     'Minor',
     'Cm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4229,11 +3064,10 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
-  ['2', 'Sunny', 'Bobby Hebb', 'Minor', 'Am', '4/4', 'No', 'No', 'Rock Pop'],
+  ['2', 'Sunny', 'Bobby Hebb', 'Minor', 'Am', '4/4', '-', 'Rock Pop'],
   [
     '2',
     'Tadd\'s Delight',
@@ -4241,8 +3075,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -4252,8 +3085,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4263,8 +3095,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4274,8 +3105,7 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4285,8 +3115,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Slow Swing'
   ],
   [
@@ -4296,33 +3125,12 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
-  ['2', 'Tenderly', 'Walter Gross', 'Major', 'E♭', '4/4', 'No', 'No', 'Ballad'],
-  [
-    '2',
-    'That\'s All',
-    'Bob Haymes',
-    'Major',
-    'B♭',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
-  [
-    '2',
-    'The Duke',
-    'Dave Brubeck',
-    'Major',
-    'C',
-    '4/4',
-    'No',
-    'No',
-    'Medium Swing'
-  ],
+  ['2', 'Tenderly', 'Walter Gross', 'Major', 'E♭', '4/4', '-', 'Ballad'],
+  ['2', 'That\'s All', 'Bob Haymes', 'Major', 'B♭', '4/4', '-', 'Medium Swing'],
+  ['2', 'The Duke', 'Dave Brubeck', 'Major', 'C', '4/4', '-', 'Medium Swing'],
   [
     '2',
     'The End Of A Love Affair',
@@ -4330,8 +3138,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -4341,8 +3148,7 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -4352,8 +3158,7 @@ List<List<String>> songData = [
     'Minor',
     'Am',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -4363,8 +3168,7 @@ List<List<String>> songData = [
     'Minor',
     'Gm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -4374,8 +3178,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -4385,8 +3188,7 @@ List<List<String>> songData = [
     'Minor',
     'Dm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Even 8ths'
   ],
   [
@@ -4396,8 +3198,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -4407,21 +3208,10 @@ List<List<String>> songData = [
     'Minor',
     'B♭m',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'The Sidewinder',
-    'Lee Morgan',
-    'Major',
-    'E♭',
-    '4/4',
-    'No',
-    'No',
-    'Funk'
-  ],
+  ['2', 'The Sidewinder', 'Lee Morgan', 'Major', 'E♭', '4/4', '-', 'Funk'],
   [
     '2',
     'The Summer Knows',
@@ -4429,8 +3219,7 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -4440,8 +3229,7 @@ List<List<String>> songData = [
     'Major',
     'A♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -4451,8 +3239,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -4462,8 +3249,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4473,8 +3259,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4484,8 +3269,7 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'Yes',
-    'No',
+    'Blues',
     'Medium Swing'
   ],
   [
@@ -4495,8 +3279,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4506,8 +3289,7 @@ List<List<String>> songData = [
     'Minor',
     'Fm',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Rock Pop'
   ],
   [
@@ -4517,22 +3299,11 @@ List<List<String>> songData = [
     'Major',
     'E',
     '3/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
-  [
-    '2',
-    'Time Remembered',
-    'Bill Evans',
-    'Minor',
-    'Bm',
-    '4/4',
-    'No',
-    'No',
-    'Ballad'
-  ],
-  ['2', 'Travels', 'Pat Metheny', 'Major', 'G', '4/4', 'No', 'No', 'Even 8ths'],
+  ['2', 'Time Remembered', 'Bill Evans', 'Minor', 'Bm', '4/4', '-', 'Ballad'],
+  ['2', 'Travels', 'Pat Metheny', 'Major', 'G', '4/4', '-', 'Even 8ths'],
   [
     '2',
     'Triste',
@@ -4540,21 +3311,10 @@ List<List<String>> songData = [
     'Major',
     'B♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
-  [
-    '2',
-    'Tune Up',
-    'Miles Davis',
-    'Major',
-    'D',
-    '4/4',
-    'No',
-    'No',
-    'Up Tempo Swing'
-  ],
+  ['2', 'Tune Up', 'Miles Davis', 'Major', 'D', '4/4', '-', 'Up Tempo Swing'],
   [
     '2',
     'Turn Out The Stars',
@@ -4562,8 +3322,7 @@ List<List<String>> songData = [
     'Minor',
     'Am',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -4573,8 +3332,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4584,8 +3342,7 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -4595,21 +3352,10 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
-  [
-    '2',
-    'Unit Seven',
-    'Sam Jones',
-    'Major',
-    'C',
-    '4/4',
-    'No',
-    'No',
-    'Medium Up Swing'
-  ],
+  ['2', 'Unit Seven', 'Sam Jones', 'Major', 'C', '4/4', '-', 'Medium Up Swing'],
   [
     '2',
     'Upper Manhattan Medical Group',
@@ -4617,21 +3363,10 @@ List<List<String>> songData = [
     'Major',
     'D♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Up Swing'
   ],
-  [
-    '2',
-    'Waltz For Ruth',
-    'Charlie Haden',
-    'Major',
-    'E♭',
-    '3/4',
-    'No',
-    'No',
-    'Waltz'
-  ],
+  ['2', 'Waltz For Ruth', 'Charlie Haden', 'Major', 'E♭', '3/4', '-', 'Waltz'],
   [
     '2',
     'Watch What Happens',
@@ -4639,8 +3374,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -4650,8 +3384,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ],
   [
@@ -4661,8 +3394,7 @@ List<List<String>> songData = [
     'Major',
     'F',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4672,8 +3404,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4683,8 +3414,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Medium Swing'
   ],
   [
@@ -4694,11 +3424,10 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
-  ['2', 'Windows', 'Chick Corea', 'Minor', 'Bm', '3/4', 'No', 'No', 'Waltz'],
+  ['2', 'Windows', 'Chick Corea', 'Minor', 'Bm', '3/4', '-', 'Waltz'],
   [
     '2',
     'With A Song In My Heart',
@@ -4706,8 +3435,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -4717,8 +3445,7 @@ List<List<String>> songData = [
     'Major',
     'E♭',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Up Tempo Swing'
   ],
   [
@@ -4728,8 +3455,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Bossa Nova'
   ],
   [
@@ -4739,8 +3465,7 @@ List<List<String>> songData = [
     'Major',
     'C',
     '4/4',
-    'No',
-    'No',
+    '-',
     'Ballad'
   ]
 ];
