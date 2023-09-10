@@ -1,4 +1,4 @@
-package com.example.kurohonchoice
+package com.hashi.kurohonchoice
 
 import io.flutter.embedding.android.FlutterActivity
 
