@@ -8,7 +8,7 @@
 PRODUCT_NAME = kurohonchoice
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.kurohonchoice
+PRODUCT_BUNDLE_IDENTIFIER = com.hashi.kurohonchoice
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 com.hashi. All rights reserved.
