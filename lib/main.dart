@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
 
                               children: <Widget>[
-                                Text(
+                                CopyableText(
                                   //'曲名：'
                                   _songName,
                                   style: const TextStyle(fontSize: 20),
@@ -273,7 +273,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     DataRow(
                                       cells: [
                                         const DataCell(Text('作曲者')),
-                                        DataCell(Text(_songCreater)),
+                                        DataCell(CopyableText(_songCreater)),
                                       ],
                                     ),
                                     DataRow(
@@ -298,7 +298,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     DataRow(
                                       cells: [
                                         const DataCell(Text('スタイル')),
-                                        DataCell(Text(_songStyle)),
+                                        DataCell(CopyableText(_songStyle)),
                                       ],
                                     ),
                                   ],
@@ -371,6 +371,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ),
                                   ],
                                 ),
+                                /*
                                 Row(children: [
                                   const Text(
                                     'クリップボードにコピー：',
@@ -421,6 +422,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ),
                                   ),
                                 ]),
+                                */
                               ],
                             ),
                           ),
@@ -600,6 +602,60 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Choice',
         child: const Icon(Icons.search),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class CopyableText extends Text {
+  const CopyableText(
+    String data, {
+    Key? key,
+    TextStyle? style,
+  }) : super(data, key: key, style: style);
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+//      onLongPress: () =>
+//          Clipboard.setData(ClipboardData(text: data.toString())),
+      onLongPress: () {
+        showDialog<void>(
+            context: context,
+            builder: (_) {
+              final ad = AlertDialogSample();
+              ad.copyText = data.toString();
+              return ad;
+            });
+      },
+      child: super.build(context),
+    );
+  }
+}
+
+// ignore: must_be_immutable
+class AlertDialogSample extends StatelessWidget {
+  AlertDialogSample({Key? key}) : super(key: key);
+  String copyText = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: const Text('コピー'),
+      content: const Text('文字列をクリップボードにコピーします。よろしいですか？'),
+      actions: <Widget>[
+        GestureDetector(
+          child: const Text('いいえ'),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+        GestureDetector(
+          child: const Text('はい'),
+          onTap: () {
+            Clipboard.setData(ClipboardData(text: copyText));
+            Navigator.pop(context);
+          },
+        )
+      ],
     );
   }
 }
