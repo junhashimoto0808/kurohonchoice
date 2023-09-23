@@ -4,7 +4,7 @@ import 'dart:math' as math;
 import 'package:url_launcher/link.dart';
 import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
@@ -268,7 +268,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: const Text('Help'),
                 onTap: () {
-                  setState(() => _city = 'Los Angeles, CA');
+                  setState(() => _city = 'aaa');
                   Navigator.pop(context);
                   launchUrl(Uri.parse(
                       'https://k4134568.github.io/main/randomKurohonHelp.html'));
@@ -277,7 +277,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: const Text('Version'),
                 onTap: () {
-                  setState(() => _city = 'Honolulu, HI');
+                  setState(() => _city = 'bbb');
                   Navigator.pop(context);
                   showDialog<void>(
                       context: context,

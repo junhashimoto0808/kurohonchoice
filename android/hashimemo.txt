@@ -1,0 +1,3 @@
+//aabファイルの作り方
+flutter build appbundle
+
