@@ -483,60 +483,34 @@ class _MyHomePageState extends State<MyHomePage> {
                                       );
                                     },
                                   ),
+                                  Link(
+                                    // 開きたいWebページのURLを指定
+                                    //String uriText = 'https://www.youtube.com/' + 'Jazz' + _songName;
+                                    uri:
+                                        Uri.parse('irealb://search?$_songName'),
+                                    // targetについては後述
+                                    target: LinkTarget.blank,
+                                    builder: (BuildContext ctx,
+                                        FollowLink? openLink) {
+                                      return TextButton(
+                                        onPressed: openLink,
+                                        style: ButtonStyle(
+                                          padding: MaterialStateProperty.all(
+                                              EdgeInsets.zero),
+                                          // minimumSize:
+                                          //     MaterialStateProperty.all(Size.zero),
+                                          tapTargetSize:
+                                              MaterialTapTargetSize.shrinkWrap,
+                                        ),
+                                        child: const Text(
+                                          'iRealPro',
+                                          style: TextStyle(fontSize: 13),
+                                        ),
+                                      );
+                                    },
+                                  ),
                                 ],
                               ),
-                              /*
-                                Row(children: [
-                                  const Text(
-                                    'クリップボードにコピー：',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                  TextButton(
-                                    style: ButtonStyle(
-                                      padding: MaterialStateProperty.all(
-                                          EdgeInsets.zero),
-                                      // minimumSize:
-                                      //     MaterialStateProperty.all(Size.zero),
-                                      tapTargetSize:
-                                          MaterialTapTargetSize.shrinkWrap,
-                                    ),
-                                    onPressed: () async {
-                                      // ボタンが押されたときに発動される処理
-                                      final data =
-                                          ClipboardData(text: _songName);
-                                      await Clipboard.setData(data);
-                                    },
-                                    child: const Text(
-                                      '曲名',
-                                      style: TextStyle(fontSize: 13),
-                                    ),
-                                  ),
-                                  const Text(
-                                    '',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                  TextButton(
-                                    style: ButtonStyle(
-                                      padding: MaterialStateProperty.all(
-                                          EdgeInsets.zero),
-                                      // minimumSize:
-                                      //     MaterialStateProperty.all(Size.zero),
-                                      tapTargetSize:
-                                          MaterialTapTargetSize.shrinkWrap,
-                                    ),
-                                    onPressed: () async {
-                                      // ボタンが押されたときに発動される処理
-                                      final data =
-                                          ClipboardData(text: _songCreater);
-                                      await Clipboard.setData(data);
-                                    },
-                                    child: const Text(
-                                      '作曲者',
-                                      style: TextStyle(fontSize: 13),
-                                    ),
-                                  ),
-                                ]),
-                                */
                             ],
                           ),
                         ),
