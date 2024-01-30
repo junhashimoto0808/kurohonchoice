@@ -141,7 +141,6 @@ class _MyHomePageState extends State<MyHomePage> {
     choiceKey.add('Am');
     choiceKey.add('B♭m');
     choiceKey.add('Bm');
-    choiceKey = choiceKey.toSet().toList();
 
     // バージョン情報の取得
     getParam();
