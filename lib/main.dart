@@ -81,9 +81,11 @@ class _MyHomePageState extends State<MyHomePage> {
   String _condSongName = '';
   String _condCreaterName = '';
   String _condForVocal = '';
+  String _condKey = '';
 
   List<String> choiceStyle = List.empty(growable: true);
   List<String> choiceForVocal = List.empty(growable: true);
+  List<String> choiceKey = List.empty(growable: true);
 
   String _city = '';
 
@@ -111,6 +113,35 @@ class _MyHomePageState extends State<MyHomePage> {
     // ForVocalの検索条件の作成
     choiceForVocal.add('');
     choiceForVocal.add('あり');
+
+    // Keyの検索条件の作成
+    choiceKey.add('');
+    choiceKey.add('C');
+    choiceKey.add('D♭');
+    choiceKey.add('D');
+    choiceKey.add('E♭');
+    choiceKey.add('E');
+    choiceKey.add('F');
+    choiceKey.add('G♭');
+    choiceKey.add('G');
+    choiceKey.add('A♭');
+    choiceKey.add('A');
+    choiceKey.add('B♭');
+    choiceKey.add('B');
+
+    choiceKey.add('Cm');
+    choiceKey.add('D♭m');
+    choiceKey.add('Dm');
+    choiceKey.add('E♭m');
+    choiceKey.add('Em');
+    choiceKey.add('Fm');
+    choiceKey.add('G♭m');
+    choiceKey.add('Gm');
+    choiceKey.add('A♭m');
+    choiceKey.add('Am');
+    choiceKey.add('B♭m');
+    choiceKey.add('Bm');
+    choiceKey = choiceKey.toSet().toList();
 
     // バージョン情報の取得
     getParam();
@@ -169,6 +200,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
         if (_condForVocal != '') {
           if (songData[a][8] != _condForVocal) {
+            continue;
+          }
+        }
+
+        if (_condKey != '') {
+          if (songData[a][4] != _condKey) {
             continue;
           }
         }
@@ -625,6 +662,29 @@ class _MyHomePageState extends State<MyHomePage> {
                                       onChanged: (String? value) {
                                         setState(() {
                                           _condForVocal = value!;
+                                        });
+                                      }),
+                                ),
+                              ]),
+                              Row(children: [
+                                const Text(
+                                  'キー：',
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                                SizedBox(
+                                  height: 35.0,
+                                  child: DropdownButton<String>(
+                                      elevation: 16,
+                                      value: _condKey,
+                                      items: choiceKey
+                                          .map((String list) =>
+                                              DropdownMenuItem(
+                                                  value: list,
+                                                  child: Text(list)))
+                                          .toList(),
+                                      onChanged: (String? value) {
+                                        setState(() {
+                                          _condKey = value!;
                                         });
                                       }),
                                 ),
