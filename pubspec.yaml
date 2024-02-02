@@ -39,6 +39,8 @@ dependencies:
 
   package_info_plus: ^4.1.0
 
+  roulette: ^0.1.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

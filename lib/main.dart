@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'songdata.dart';
 import 'dart:math' as math;
@@ -6,6 +8,8 @@ import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 //import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:roulette/roulette.dart';
+import 'arrow.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -87,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<String> choiceForVocal = List.empty(growable: true);
   List<String> choiceKey = List.empty(growable: true);
 
-  String _city = '';
+  //String _city = '';
 
   // バージョン
   String version = '';
@@ -305,9 +309,21 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   )),
               ListTile(
+                title: const Text('キーランダム選択ツール'),
+                onTap: () {
+                  Navigator.pop(context);
+                  showDialog<void>(
+                      //barrierDismissible: false,
+                      context: context,
+                      builder: (_) {
+                        const vd = DialogKeyChange();
+                        return vd;
+                      });
+                },
+              ),
+              ListTile(
                 title: const Text('Help'),
                 onTap: () {
-                  setState(() => _city = 'aaa');
                   Navigator.pop(context);
                   launchUrl(Uri.parse(
                       'https://k4134568.github.io/main/randomKurohonHelp.html'));
@@ -316,7 +332,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: const Text('Version'),
                 onTap: () {
-                  setState(() => _city = 'bbb');
                   Navigator.pop(context);
                   showDialog<void>(
                       context: context,
@@ -929,27 +944,264 @@ class VersionDialog extends StatelessWidget {
   }
 }
 
-class KeyChoiceDialogSample extends StatelessWidget {
-  const KeyChoiceDialogSample({Key? key}) : super(key: key);
+class MyRoulette extends StatelessWidget {
+  const MyRoulette({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
+
+  final RouletteController controller;
 
   @override
   Widget build(BuildContext context) {
-    return SimpleDialog(
-      title: const Text('選んでね'),
+    return Stack(
+      alignment: Alignment.topCenter,
       children: [
-        SimpleDialogOption(
-          child: const Text('選択肢1'),
-          onPressed: () {
-            Navigator.pop(context, '1が選択されました');
-          },
+        SizedBox(
+          width: 260,
+          height: 260,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: Roulette(
+              // Provide controller to update its state
+              controller: controller,
+              // Configure roulette's appearance
+              style: const RouletteStyle(
+                dividerThickness: 0.0,
+                dividerColor: Colors.black,
+                centerStickSizePercent: 0.05,
+                centerStickerColor: Colors.black,
+              ),
+            ),
+          ),
         ),
-        SimpleDialogOption(
-          child: const Text('選択肢2'),
-          onPressed: () {
-            Navigator.pop(context, '2が選択されました');
-          },
-        )
+        const Arrow(),
       ],
     );
+  }
+}
+
+class DialogKeyChange extends StatefulWidget {
+  const DialogKeyChange({Key? key}) : super(key: key);
+
+  @override
+  State<DialogKeyChange> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<DialogKeyChange>
+    with SingleTickerProviderStateMixin {
+  static final _random = Random();
+
+  late RouletteController _controller;
+  //bool _clockwise = true;
+
+/*
+  final colors = <Color>[
+    Colors.red.withAlpha(50),
+    Colors.green.withAlpha(30),
+    Colors.blue.withAlpha(70),
+    Colors.yellow.withAlpha(90),
+    Colors.amber.withAlpha(50),
+    Colors.indigo.withAlpha(70),
+  ];
+*/
+  final colors = <Color>[
+    Colors.blue.withAlpha(70),
+    Colors.indigo.withAlpha(70),
+    Colors.blue.withAlpha(70),
+    Colors.indigo.withAlpha(70),
+    Colors.blue.withAlpha(70),
+    Colors.indigo.withAlpha(70),
+    Colors.blue.withAlpha(70),
+    Colors.indigo.withAlpha(70),
+    Colors.blue.withAlpha(70),
+    Colors.indigo.withAlpha(70),
+    Colors.blue.withAlpha(70),
+    Colors.indigo.withAlpha(70),
+  ];
+
+  final icons = <IconData>[
+    Icons.ac_unit,
+    Icons.access_alarm,
+    Icons.access_time,
+    Icons.accessibility,
+    Icons.account_balance,
+    Icons.account_balance_wallet,
+    Icons.ac_unit,
+    Icons.access_alarm,
+    Icons.access_time,
+    Icons.accessibility,
+    Icons.account_balance,
+    Icons.account_balance_wallet,
+  ];
+
+  final images = <ImageProvider>[
+    // Use [AssetImage] if you have 2.0x, 3.0x images,
+    // We only have 1 exact image here
+    const ExactAssetImage("asset/gradient.jpg"),
+    const NetworkImage("https://picsum.photos/seed/example1/400"),
+    const ExactAssetImage("asset/gradient.jpg"),
+    const NetworkImage("https://bad.link.to.image"),
+    const ExactAssetImage("asset/gradient.jpg"),
+    const NetworkImage("https://picsum.photos/seed/example5/400"),
+    const ExactAssetImage("asset/gradient.jpg"),
+    const NetworkImage("https://picsum.photos/seed/example1/400"),
+    const ExactAssetImage("asset/gradient.jpg"),
+    const NetworkImage("https://bad.link.to.image"),
+    const ExactAssetImage("asset/gradient.jpg"),
+    const NetworkImage("https://picsum.photos/seed/example5/400"),
+    // MemoryImage(...)
+    // FileImage(...)
+    // ResizeImage(...)
+  ];
+
+  final texts = [
+    'C',
+    'Db',
+    'D',
+    'Eb',
+    'E',
+    'F',
+    'Gb',
+    'G',
+    'Ab',
+    'A',
+    'Bb',
+    'B',
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+
+    assert(colors.length == icons.length);
+    //assert(colors.length == images.length);
+
+/*
+    _controller = RouletteController(
+      vsync: this,
+      group: RouletteGroup.uniformImages(
+        colors.length,
+        colorBuilder: (index) => colors[index],
+        imageBuilder: (index) => images[index],
+        textBuilder: (index) => texts[index],
+        /*
+        textBuilder: (index) {
+          if (index == 0) return 'Hi';
+          return '';
+        },
+        */
+        styleBuilder: (index) {
+          return const TextStyle(color: Colors.black, fontSize: 18);
+        },
+      ),
+    );
+    
+        */
+    final group = RouletteGroup.uniform(
+      12,
+      colorBuilder: (index) {
+        return colors[index];
+      },
+      textBuilder: (index) {
+        return texts[index];
+      },
+    );
+    _controller = RouletteController(vsync: this, group: group);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      /*
+      appBar: AppBar(
+          //title: const Text('Roulette'),
+          ),
+          */
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.pink.withOpacity(0.1),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              /*
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    "Clockwise: ",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  Switch(
+                    value: _clockwise,
+                    onChanged: (onChanged) {
+                      setState(() {
+                        _controller.resetAnimation();
+                        _clockwise = !_clockwise;
+                      });
+                    },
+                  ),
+                ],
+              ),
+              */
+              MyRoulette(controller: _controller),
+            ],
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      /*
+      floatingActionButton: FloatingActionButton(
+        // Use the controller to run the animation with rollTo method
+        onPressed: () => _controller.rollTo(
+          3,
+          //clockwise: _clockwise,
+          //minRotateCircles : Rotate
+          //duration: Durations.extralong1,
+          //curve: Curves.ease,
+          offset: _random.nextDouble() * 12,
+        ),
+        child: const Icon(Icons.refresh_rounded),
+      ),
+      */
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(
+            // Use the controller to run the animation with rollTo method
+            onPressed: () => _controller.rollTo(
+              3,
+              //clockwise: _clockwise,
+              //minRotateCircles : Rotate
+              duration: Durations.extralong4,
+              curve: Curves.fastLinearToSlowEaseIn,
+              offset: _random.nextDouble() * 12,
+            ),
+            child: const Icon(Icons.refresh_rounded),
+          ),
+          const SizedBox(
+            height: 16 /*間隔*/,
+          ),
+          FloatingActionButton(
+            child: const Icon(
+              Icons.chevron_left,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }
