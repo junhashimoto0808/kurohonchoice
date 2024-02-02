@@ -274,6 +274,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           centerTitle: true,
           title: Text(widget.title),
+
           /*
         actions: <Widget>[
           IconButton(
@@ -289,18 +290,20 @@ class _MyHomePageState extends State<MyHomePage> {
         drawer: Drawer(
           child: ListView(
             children: <Widget>[
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                ),
-                child: Text(
-                  'Menu',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+              const SizedBox(
+                  height: 75 /*高さ*/,
+                  child: DrawerHeader(
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                    ),
+                    child: Text(
+                      'Menu',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                  )),
               ListTile(
                 title: const Text('Help'),
                 onTap: () {
@@ -418,9 +421,38 @@ class _MyHomePageState extends State<MyHomePage> {
                                   DataRow(
                                     cells: [
                                       const DataCell(Text('キー')),
-                                      DataCell(Text(_songKey)),
+                                      DataCell(CopyableText(_songKey)),
                                     ],
                                   ),
+                                  /*
+                                  DataRow(
+                                    cells: [
+                                      const DataCell(Text('キー')),
+                                      DataCell(GestureDetector(
+                                        onTap: () async {
+                                          //タップ処理
+                                          final String? selectedText =
+                                              await showDialog<String>(
+                                                  context: context,
+                                                  builder: (_) {
+                                                    return WillPopScope(
+                                                      child:
+                                                          const KeyChoiceDialogSample(),
+                                                      onWillPop: () async =>
+                                                          false,
+                                                    );
+                                                  });
+                                        },
+                                        child: Text(
+                                          _songKey,
+                                          style: const TextStyle(
+                                            color: Colors.blue,
+                                          ),
+                                        ),
+                                      )),
+                                    ],
+                                  ),
+                                  */
                                   DataRow(
                                     cells: [
                                       const DataCell(Text('拍子')),
@@ -893,6 +925,31 @@ class VersionDialog extends StatelessWidget {
         )
       ],
       */
+    );
+  }
+}
+
+class KeyChoiceDialogSample extends StatelessWidget {
+  const KeyChoiceDialogSample({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SimpleDialog(
+      title: const Text('選んでね'),
+      children: [
+        SimpleDialogOption(
+          child: const Text('選択肢1'),
+          onPressed: () {
+            Navigator.pop(context, '1が選択されました');
+          },
+        ),
+        SimpleDialogOption(
+          child: const Text('選択肢2'),
+          onPressed: () {
+            Navigator.pop(context, '2が選択されました');
+          },
+        )
+      ],
     );
   }
 }
