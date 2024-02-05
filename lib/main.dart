@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'ランダム黒本くん',
       theme: ThemeData(
         // This is the theme of your application.
@@ -309,7 +310,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   )),
               ListTile(
-                title: const Text('キーランダム選択ツール'),
+                title: const Text('ランダムキーセレクター'),
                 onTap: () {
                   Navigator.pop(context);
                   showDialog<void>(
@@ -347,99 +348,103 @@ class _MyHomePageState extends State<MyHomePage> {
 
         body: Builder(
             builder: ((context) => SingleChildScrollView(
+                physics: const AlwaysScrollableScrollPhysics(),
                 //child: SelectionArea(
-                child: SizedBox(
+                /*
+                child: 
+                SizedBox(
                     height: MediaQuery.of(context).size.height -
                         (Scaffold.of(context).appBarMaxHeight ?? 0),
-                    // ignore: sort_child_properties_last
-                    child: Column(
-                      children: [
-                        Container(
-                          width: double.infinity, //横幅いっぱいを意味する
-                          // 内側の余白（パディング）
-                          padding: const EdgeInsets.all(10),
-                          // 外側の余白（マージン）
-                          margin: const EdgeInsets.all(10),
+                        */
+                // ignore: sort_child_properties_last
+                child: Column(
+                  children: [
+                    Container(
+                      width: double.infinity, //横幅いっぱいを意味する
+                      // 内側の余白（パディング）
+                      padding: const EdgeInsets.all(10),
+                      // 外側の余白（マージン）
+                      margin: const EdgeInsets.all(10),
 
-                          decoration: BoxDecoration(
-                            // 枠線
-                            border: Border.all(color: Colors.grey, width: 2),
-                            // 角丸
-                            borderRadius: BorderRadius.circular(8),
+                      decoration: BoxDecoration(
+                        // 枠線
+                        border: Border.all(color: Colors.grey, width: 2),
+                        // 角丸
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Column(
+                        // Column is also a layout widget. It takes a list of children and
+                        // arranges them vertically. By default, it sizes itself to fit its
+                        // children horizontally, and tries to be as tall as its parent.
+                        //
+                        // Column has various properties to control how it sizes itself and
+                        // how it positions its children. Here we use mainAxisAlignment to
+                        // center the children vertically; the main axis here is the vertical
+                        // axis because Columns are vertical (the cross axis would be
+                        // horizontal).
+                        //
+                        // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+                        // action in the IDE, or press "p" in the console), to see the
+                        // wireframe for each widget.
+
+                        //hashi mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+
+                        children: <Widget>[
+                          CopyableText(
+                            //'曲名：'
+                            _songName,
+                            style: const TextStyle(fontSize: 20),
                           ),
-                          child: Column(
-                            // Column is also a layout widget. It takes a list of children and
-                            // arranges them vertically. By default, it sizes itself to fit its
-                            // children horizontally, and tries to be as tall as its parent.
-                            //
-                            // Column has various properties to control how it sizes itself and
-                            // how it positions its children. Here we use mainAxisAlignment to
-                            // center the children vertically; the main axis here is the vertical
-                            // axis because Columns are vertical (the cross axis would be
-                            // horizontal).
-                            //
-                            // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-                            // action in the IDE, or press "p" in the console), to see the
-                            // wireframe for each widget.
-
-                            //hashi mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-
-                            children: <Widget>[
-                              CopyableText(
-                                //'曲名：'
-                                _songName,
-                                style: const TextStyle(fontSize: 20),
-                              ),
-                              const Text(
-                                '',
-                                style: TextStyle(fontSize: 15),
-                              ),
-                              DataTable(
-                                /*
+                          const Text(
+                            '',
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          DataTable(
+                            /*
                   columnWidths: {
                     0: FlexColumnWidth(2),
                     1: FlexColumnWidth(1),
                     2: FlexColumnWidth(3),
                   },
                   */
-                                headingRowHeight: 0,
-                                dataRowMinHeight: 25,
-                                dataRowMaxHeight: 25,
-                                dataTextStyle: const TextStyle(
-                                  fontSize: 13 /*テキストのサイズ*/,
-                                  color: Colors.black,
-                                ),
-                                columns: const [
-                                  DataColumn(
-                                    //label: SizedBox(width: 5, child: Text('aaa')),
-                                    label: Text(''),
-                                  ),
-                                  DataColumn(
-                                    //label: SizedBox(width: 5, child: Text('bbb')),
-                                    label: Text(''),
-                                  ),
+                            headingRowHeight: 0,
+                            dataRowMinHeight: 25,
+                            dataRowMaxHeight: 25,
+                            dataTextStyle: const TextStyle(
+                              fontSize: 13 /*テキストのサイズ*/,
+                              color: Colors.black,
+                            ),
+                            columns: const [
+                              DataColumn(
+                                //label: SizedBox(width: 5, child: Text('aaa')),
+                                label: Text(''),
+                              ),
+                              DataColumn(
+                                //label: SizedBox(width: 5, child: Text('bbb')),
+                                label: Text(''),
+                              ),
+                            ],
+                            rows: [
+                              DataRow(
+                                cells: [
+                                  const DataCell(Text('巻')),
+                                  DataCell(Text(_songVol)),
                                 ],
-                                rows: [
-                                  DataRow(
-                                    cells: [
-                                      const DataCell(Text('巻')),
-                                      DataCell(Text(_songVol)),
-                                    ],
-                                  ),
-                                  DataRow(
-                                    cells: [
-                                      const DataCell(Text('作曲者')),
-                                      DataCell(CopyableText(_songCreater)),
-                                    ],
-                                  ),
-                                  DataRow(
-                                    cells: [
-                                      const DataCell(Text('キー')),
-                                      DataCell(CopyableText(_songKey)),
-                                    ],
-                                  ),
-                                  /*
+                              ),
+                              DataRow(
+                                cells: [
+                                  const DataCell(Text('作曲者')),
+                                  DataCell(CopyableText(_songCreater)),
+                                ],
+                              ),
+                              DataRow(
+                                cells: [
+                                  const DataCell(Text('キー')),
+                                  DataCell(CopyableText(_songKey)),
+                                ],
+                              ),
+                              /*
                                   DataRow(
                                     cells: [
                                       const DataCell(Text('キー')),
@@ -468,350 +473,343 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ],
                                   ),
                                   */
-                                  DataRow(
-                                    cells: [
-                                      const DataCell(Text('拍子')),
-                                      DataCell(Text(_songBeat)),
-                                    ],
-                                  ),
-                                  DataRow(
-                                    cells: [
-                                      const DataCell(Text('Blues/循環')),
-                                      DataCell(Text(_songIsBluesRhythmChange)),
-                                    ],
-                                  ),
-                                  DataRow(
-                                    cells: [
-                                      const DataCell(Text('スタイル')),
-                                      DataCell(CopyableText(_songStyle)),
-                                    ],
-                                  ),
-                                  DataRow(
-                                    cells: [
-                                      const DataCell(Text('For Vocal')),
-                                      DataCell(CopyableText(_songForVocal)),
-                                    ],
-                                  ),
-                                  DataRow(
-                                    cells: [
-                                      const DataCell(Text('改訂版の影響')),
-                                      DataCell(CopyableText(_songChanges)),
-                                    ],
-                                  ),
+                              DataRow(
+                                cells: [
+                                  const DataCell(Text('拍子')),
+                                  DataCell(Text(_songBeat)),
                                 ],
                               ),
-                              const Text(
-                                '',
-                                style: TextStyle(fontSize: 5),
+                              DataRow(
+                                cells: [
+                                  const DataCell(Text('Blues/循環')),
+                                  DataCell(Text(_songIsBluesRhythmChange)),
+                                ],
                               ),
-                              Row(
-                                children: [
-                                  const Text(
-                                    '検索：',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                  Link(
-                                    // 開きたいWebページのURLを指定
-                                    //String uriText = 'https://www.youtube.com/' + 'Jazz' + _songName;
-                                    uri: Uri.parse(
-                                        'https://www.youtube.com/results?search_query=Jazz $_songName'),
-                                    // targetについては後述
-                                    target: LinkTarget.blank,
-                                    builder: (BuildContext ctx,
-                                        FollowLink? openLink) {
-                                      return TextButton(
-                                        onPressed: openLink,
-                                        style: ButtonStyle(
-                                          padding: MaterialStateProperty.all(
-                                              EdgeInsets.zero),
-                                          // minimumSize:
-                                          //     MaterialStateProperty.all(Size.zero),
-                                          tapTargetSize:
-                                              MaterialTapTargetSize.shrinkWrap,
-                                        ),
-                                        child: const Text(
-                                          'Youtube',
-                                          style: TextStyle(fontSize: 13),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                  const Text(
-                                    '',
-                                    style: TextStyle(fontSize: 13),
-                                  ),
-                                  Link(
-                                    // 開きたいWebページのURLを指定
-                                    //String uriText = 'https://www.youtube.com/' + 'Jazz' + _songName;
-                                    uri: Uri.parse(
-                                        'https://www.google.com/search?q=Jazz $_songName'),
-                                    // targetについては後述
-                                    target: LinkTarget.blank,
-                                    builder: (BuildContext ctx,
-                                        FollowLink? openLink) {
-                                      return TextButton(
-                                        onPressed: openLink,
-                                        style: ButtonStyle(
-                                          padding: MaterialStateProperty.all(
-                                              EdgeInsets.zero),
-                                          // minimumSize:
-                                          //     MaterialStateProperty.all(Size.zero),
-                                          tapTargetSize:
-                                              MaterialTapTargetSize.shrinkWrap,
-                                        ),
-                                        child: const Text(
-                                          'Google',
-                                          style: TextStyle(fontSize: 13),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                  Link(
-                                    // 開きたいWebページのURLを指定
-                                    //String uriText = 'https://www.youtube.com/' + 'Jazz' + _songName;
-                                    uri:
-                                        Uri.parse('irealb://search?$_songName'),
-                                    // targetについては後述
-                                    target: LinkTarget.blank,
-                                    builder: (BuildContext ctx,
-                                        FollowLink? openLink) {
-                                      return TextButton(
-                                        onPressed: openLink,
-                                        style: ButtonStyle(
-                                          padding: MaterialStateProperty.all(
-                                              EdgeInsets.zero),
-                                          // minimumSize:
-                                          //     MaterialStateProperty.all(Size.zero),
-                                          tapTargetSize:
-                                              MaterialTapTargetSize.shrinkWrap,
-                                        ),
-                                        child: const Text(
-                                          'iRealPro',
-                                          style: TextStyle(fontSize: 13),
-                                        ),
-                                      );
-                                    },
-                                  ),
+                              DataRow(
+                                cells: [
+                                  const DataCell(Text('スタイル')),
+                                  DataCell(CopyableText(_songStyle)),
+                                ],
+                              ),
+                              DataRow(
+                                cells: [
+                                  const DataCell(Text('For Vocal')),
+                                  DataCell(CopyableText(_songForVocal)),
+                                ],
+                              ),
+                              DataRow(
+                                cells: [
+                                  const DataCell(Text('改訂版の影響')),
+                                  DataCell(CopyableText(_songChanges)),
                                 ],
                               ),
                             ],
                           ),
-                        ),
-                        Container(
-                          width: double.infinity, //横幅いっぱいを意味する
-                          // 内側の余白（パディング）
-                          padding: const EdgeInsets.all(10),
-                          // 外側の余白（マージン）
-                          margin: const EdgeInsets.all(10),
-
-                          decoration: BoxDecoration(
-                            // 枠線
-                            border: Border.all(color: Colors.grey, width: 2),
-                            // 角丸
-                            borderRadius: BorderRadius.circular(8),
+                          const Text(
+                            '',
+                            style: TextStyle(fontSize: 5),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
+                          Row(
+                            children: [
                               const Text(
-                                '検索条件',
+                                '検索：',
                                 style: TextStyle(fontSize: 13),
+                              ),
+                              Link(
+                                // 開きたいWebページのURLを指定
+                                //String uriText = 'https://www.youtube.com/' + 'Jazz' + _songName;
+                                uri: Uri.parse(
+                                    'https://www.youtube.com/results?search_query=Jazz $_songName'),
+                                // targetについては後述
+                                target: LinkTarget.blank,
+                                builder:
+                                    (BuildContext ctx, FollowLink? openLink) {
+                                  return TextButton(
+                                    onPressed: openLink,
+                                    style: ButtonStyle(
+                                      padding: MaterialStateProperty.all(
+                                          EdgeInsets.zero),
+                                      // minimumSize:
+                                      //     MaterialStateProperty.all(Size.zero),
+                                      tapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
+                                    ),
+                                    child: const Text(
+                                      'Youtube',
+                                      style: TextStyle(fontSize: 13),
+                                    ),
+                                  );
+                                },
                               ),
                               const Text(
                                 '',
                                 style: TextStyle(fontSize: 13),
                               ),
-                              Row(children: [
-                                const Text(
-                                  '巻：',
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                Radio(
-                                    value: 0,
-                                    groupValue: _condVol,
-                                    onChanged: (value) {
-                                      setState(() {
-                                        _condVol = value as int;
-                                      });
-                                    }),
-                                //const SizedBox(width: 0.0),
-                                const Text(
-                                  '全部',
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                Radio(
-                                    value: 1,
-                                    groupValue: _condVol,
-                                    onChanged: (value) {
-                                      setState(() {
-                                        _condVol = value as int;
-                                      });
-                                    }),
-                                //const SizedBox(width: 0.0),
-                                const Text(
-                                  '１巻から',
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                Radio(
-                                    value: 2,
-                                    groupValue: _condVol,
-                                    onChanged: (value) {
-                                      setState(() {
-                                        _condVol = value as int;
-                                      });
-                                    }),
-                                //const SizedBox(width: 0.0),
-                                const Text(
-                                  '２巻から',
-                                  style: TextStyle(fontSize: 13),
-                                )
-                              ]),
-                              Row(children: [
-                                const Text(
-                                  'スタイル：',
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                SizedBox(
-                                  height: 35.0,
-                                  child: DropdownButton<String>(
-                                      elevation: 16,
-                                      value: _condStyle,
-                                      items: choiceStyle
-                                          .map((String list) =>
-                                              DropdownMenuItem(
-                                                  value: list,
-                                                  child: Text(list)))
-                                          .toList(),
-                                      onChanged: (String? value) {
-                                        setState(() {
-                                          _condStyle = value!;
-                                        });
-                                      }),
-                                ),
-                              ]),
-                              Row(children: [
-                                const Text(
-                                  'For Vocal：',
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                SizedBox(
-                                  height: 35.0,
-                                  child: DropdownButton<String>(
-                                      elevation: 16,
-                                      value: _condForVocal,
-                                      items: choiceForVocal
-                                          .map((String list) =>
-                                              DropdownMenuItem(
-                                                  value: list,
-                                                  child: Text(list)))
-                                          .toList(),
-                                      onChanged: (String? value) {
-                                        setState(() {
-                                          _condForVocal = value!;
-                                        });
-                                      }),
-                                ),
-                              ]),
-                              Row(children: [
-                                const Text(
-                                  'キー：',
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                SizedBox(
-                                  height: 35.0,
-                                  child: DropdownButton<String>(
-                                      elevation: 16,
-                                      value: _condKey,
-                                      items: choiceKey
-                                          .map((String list) =>
-                                              DropdownMenuItem(
-                                                  value: list,
-                                                  child: Text(list)))
-                                          .toList(),
-                                      onChanged: (String? value) {
-                                        setState(() {
-                                          _condKey = value!;
-                                        });
-                                      }),
-                                ),
-                              ]),
-                              Row(children: [
-                                const Text(
-                                  '曲名：',
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                Flexible(
-                                  // ←追加SizedBox(
-                                  child: TextField(
-                                    style: const TextStyle(
-                                      fontSize: 13 /*テキストのサイズ*/,
+                              Link(
+                                // 開きたいWebページのURLを指定
+                                //String uriText = 'https://www.youtube.com/' + 'Jazz' + _songName;
+                                uri: Uri.parse(
+                                    'https://www.google.com/search?q=Jazz $_songName'),
+                                // targetについては後述
+                                target: LinkTarget.blank,
+                                builder:
+                                    (BuildContext ctx, FollowLink? openLink) {
+                                  return TextButton(
+                                    onPressed: openLink,
+                                    style: ButtonStyle(
+                                      padding: MaterialStateProperty.all(
+                                          EdgeInsets.zero),
+                                      // minimumSize:
+                                      //     MaterialStateProperty.all(Size.zero),
+                                      tapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
                                     ),
-                                    controller: _controller,
-
-                                    //maxLength: 20,
-                                    maxLines: 1,
-                                    decoration: InputDecoration(
-                                      //icon: Icon(Icons.android),
-                                      hintText: "(部分一致)",
-                                      //labelText: "tweet",
-                                      suffixIcon: IconButton(
-                                        onPressed: () {
-                                          _controller.clear();
-                                          _condSongName = '';
-                                        },
-                                        icon: const Icon(
-                                          Icons.clear,
-                                          size: 13,
-                                        ),
-                                      ),
+                                    child: const Text(
+                                      'Google',
+                                      style: TextStyle(fontSize: 13),
                                     ),
-                                    onChanged: (String txt) {
-                                      _condSongName = txt;
-                                    },
-                                  ),
-                                ),
-                              ]),
-                              Row(children: [
-                                const Text(
-                                  '作曲者名：',
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                Flexible(
-                                  // ←追加SizedBox(
-                                  child: TextField(
-                                    style: const TextStyle(
-                                      fontSize: 13 /*テキストのサイズ*/,
+                                  );
+                                },
+                              ),
+                              Link(
+                                // 開きたいWebページのURLを指定
+                                //String uriText = 'https://www.youtube.com/' + 'Jazz' + _songName;
+                                uri: Uri.parse('irealb://search?$_songName'),
+                                // targetについては後述
+                                target: LinkTarget.blank,
+                                builder:
+                                    (BuildContext ctx, FollowLink? openLink) {
+                                  return TextButton(
+                                    onPressed: openLink,
+                                    style: ButtonStyle(
+                                      padding: MaterialStateProperty.all(
+                                          EdgeInsets.zero),
+                                      // minimumSize:
+                                      //     MaterialStateProperty.all(Size.zero),
+                                      tapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
                                     ),
-                                    controller: _controller2,
-
-                                    //maxLength: 20,
-                                    maxLines: 1,
-                                    decoration: InputDecoration(
-                                      //icon: Icon(Icons.android),
-                                      hintText: "(部分一致)",
-                                      //labelText: "tweet",
-                                      suffixIcon: IconButton(
-                                        onPressed: () {
-                                          _controller2.clear();
-                                          _condCreaterName = '';
-                                        },
-                                        icon: const Icon(
-                                          Icons.clear,
-                                          size: 13,
-                                        ),
-                                      ),
+                                    child: const Text(
+                                      'iRealPro',
+                                      style: TextStyle(fontSize: 13),
                                     ),
-                                    onChanged: (String txt) {
-                                      _condCreaterName = txt;
-                                    },
-                                  ),
-                                ),
-                              ]),
+                                  );
+                                },
+                              ),
                             ],
                           ),
-                        ),
-                      ],
-                    ))))),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: double.infinity, //横幅いっぱいを意味する
+                      // 内側の余白（パディング）
+                      padding: const EdgeInsets.all(10),
+                      // 外側の余白（マージン）
+                      margin: const EdgeInsets.all(10),
+
+                      decoration: BoxDecoration(
+                        // 枠線
+                        border: Border.all(color: Colors.grey, width: 2),
+                        // 角丸
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          const Text(
+                            '検索条件',
+                            style: TextStyle(fontSize: 13),
+                          ),
+                          const Text(
+                            '',
+                            style: TextStyle(fontSize: 13),
+                          ),
+                          Row(children: [
+                            const Text(
+                              '巻：',
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            Radio(
+                                value: 0,
+                                groupValue: _condVol,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _condVol = value as int;
+                                  });
+                                }),
+                            //const SizedBox(width: 0.0),
+                            const Text(
+                              '全部',
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            Radio(
+                                value: 1,
+                                groupValue: _condVol,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _condVol = value as int;
+                                  });
+                                }),
+                            //const SizedBox(width: 0.0),
+                            const Text(
+                              '１巻から',
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            Radio(
+                                value: 2,
+                                groupValue: _condVol,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _condVol = value as int;
+                                  });
+                                }),
+                            //const SizedBox(width: 0.0),
+                            const Text(
+                              '２巻から',
+                              style: TextStyle(fontSize: 13),
+                            )
+                          ]),
+                          Row(children: [
+                            const Text(
+                              'スタイル：',
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            SizedBox(
+                              height: 35.0,
+                              child: DropdownButton<String>(
+                                  elevation: 16,
+                                  value: _condStyle,
+                                  items: choiceStyle
+                                      .map((String list) => DropdownMenuItem(
+                                          value: list, child: Text(list)))
+                                      .toList(),
+                                  onChanged: (String? value) {
+                                    setState(() {
+                                      _condStyle = value!;
+                                    });
+                                  }),
+                            ),
+                          ]),
+                          Row(children: [
+                            const Text(
+                              'For Vocal：',
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            SizedBox(
+                              height: 35.0,
+                              child: DropdownButton<String>(
+                                  elevation: 16,
+                                  value: _condForVocal,
+                                  items: choiceForVocal
+                                      .map((String list) => DropdownMenuItem(
+                                          value: list, child: Text(list)))
+                                      .toList(),
+                                  onChanged: (String? value) {
+                                    setState(() {
+                                      _condForVocal = value!;
+                                    });
+                                  }),
+                            ),
+                          ]),
+                          Row(children: [
+                            const Text(
+                              'キー：',
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            SizedBox(
+                              height: 35.0,
+                              child: DropdownButton<String>(
+                                  elevation: 16,
+                                  value: _condKey,
+                                  items: choiceKey
+                                      .map((String list) => DropdownMenuItem(
+                                          value: list, child: Text(list)))
+                                      .toList(),
+                                  onChanged: (String? value) {
+                                    setState(() {
+                                      _condKey = value!;
+                                    });
+                                  }),
+                            ),
+                          ]),
+                          Row(children: [
+                            const Text(
+                              '曲名：',
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            Flexible(
+                              // ←追加SizedBox(
+                              child: TextField(
+                                style: const TextStyle(
+                                  fontSize: 13 /*テキストのサイズ*/,
+                                ),
+                                controller: _controller,
+
+                                //maxLength: 20,
+                                maxLines: 1,
+                                decoration: InputDecoration(
+                                  //icon: Icon(Icons.android),
+                                  hintText: "(部分一致)",
+                                  //labelText: "tweet",
+                                  suffixIcon: IconButton(
+                                    onPressed: () {
+                                      _controller.clear();
+                                      _condSongName = '';
+                                    },
+                                    icon: const Icon(
+                                      Icons.clear,
+                                      size: 13,
+                                    ),
+                                  ),
+                                ),
+                                onChanged: (String txt) {
+                                  _condSongName = txt;
+                                },
+                              ),
+                            ),
+                          ]),
+                          Row(children: [
+                            const Text(
+                              '作曲者名：',
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            Flexible(
+                              // ←追加SizedBox(
+                              child: TextField(
+                                style: const TextStyle(
+                                  fontSize: 13 /*テキストのサイズ*/,
+                                ),
+                                controller: _controller2,
+
+                                //maxLength: 20,
+                                maxLines: 1,
+                                decoration: InputDecoration(
+                                  //icon: Icon(Icons.android),
+                                  hintText: "(部分一致)",
+                                  //labelText: "tweet",
+                                  suffixIcon: IconButton(
+                                    onPressed: () {
+                                      _controller2.clear();
+                                      _condCreaterName = '';
+                                    },
+                                    icon: const Icon(
+                                      Icons.clear,
+                                      size: 13,
+                                    ),
+                                  ),
+                                ),
+                                onChanged: (String txt) {
+                                  _condCreaterName = txt;
+                                },
+                              ),
+                            ),
+                          ]),
+                        ],
+                      ),
+                    ),
+                  ],
+                )))),
 
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
@@ -1020,6 +1018,7 @@ class _HomePageState extends State<DialogKeyChange>
     Colors.indigo.withAlpha(70),
   ];
 
+/*
   final icons = <IconData>[
     Icons.ac_unit,
     Icons.access_alarm,
@@ -1034,7 +1033,8 @@ class _HomePageState extends State<DialogKeyChange>
     Icons.account_balance,
     Icons.account_balance_wallet,
   ];
-
+*/
+/*
   final images = <ImageProvider>[
     // Use [AssetImage] if you have 2.0x, 3.0x images,
     // We only have 1 exact image here
@@ -1054,6 +1054,7 @@ class _HomePageState extends State<DialogKeyChange>
     // FileImage(...)
     // ResizeImage(...)
   ];
+*/
 
   final texts = [
     'C',
@@ -1074,7 +1075,7 @@ class _HomePageState extends State<DialogKeyChange>
   void initState() {
     super.initState();
 
-    assert(colors.length == icons.length);
+    //assert(colors.length == icons.length);
     //assert(colors.length == images.length);
 
 /*
