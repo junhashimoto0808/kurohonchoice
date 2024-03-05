@@ -87,10 +87,12 @@ class _MyHomePageState extends State<MyHomePage> {
   String _condCreaterName = '';
   String _condForVocal = '';
   String _condKey = '';
+  String _condKeyMm = '';
 
   List<String> choiceStyle = List.empty(growable: true);
   List<String> choiceForVocal = List.empty(growable: true);
   List<String> choiceKey = List.empty(growable: true);
+  List<String> choiceKeyMm = List.empty(growable: true);
 
   //String _city = '';
 
@@ -134,18 +136,9 @@ class _MyHomePageState extends State<MyHomePage> {
     choiceKey.add('B♭');
     choiceKey.add('B');
 
-    choiceKey.add('Cm');
-    choiceKey.add('D♭m');
-    choiceKey.add('Dm');
-    choiceKey.add('E♭m');
-    choiceKey.add('Em');
-    choiceKey.add('Fm');
-    choiceKey.add('G♭m');
-    choiceKey.add('Gm');
-    choiceKey.add('A♭m');
-    choiceKey.add('Am');
-    choiceKey.add('B♭m');
-    choiceKey.add('Bm');
+    choiceKeyMm.add('');
+    choiceKeyMm.add('Major');
+    choiceKeyMm.add('Minor');
 
     // バージョン情報の取得
     getParam();
@@ -208,8 +201,26 @@ class _MyHomePageState extends State<MyHomePage> {
           }
         }
 
+        var keyStr = "";
+        var keyStrMm = "";
+
+        String s = songData[a][4];
+        if (s.endsWith('m')) {
+          keyStrMm = "Minor";
+          keyStr = s.substring(0, s.indexOf('m'));
+        } else {
+          keyStrMm = "Major";
+          keyStr = s;
+        }
+
         if (_condKey != '') {
-          if (songData[a][4] != _condKey) {
+          if (_condKey != keyStr) {
+            continue;
+          }
+        }
+
+        if (_condKeyMm != '') {
+          if (_condKeyMm != keyStrMm) {
             continue;
           }
         }
@@ -729,6 +740,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                   onChanged: (String? value) {
                                     setState(() {
                                       _condKey = value!;
+                                    });
+                                  }),
+                            ),
+                            SizedBox(
+                              height: 35.0,
+                              child: DropdownButton<String>(
+                                  elevation: 16,
+                                  value: _condKeyMm,
+                                  items: choiceKeyMm
+                                      .map((String list) => DropdownMenuItem(
+                                          value: list, child: Text(list)))
+                                      .toList(),
+                                  onChanged: (String? value) {
+                                    setState(() {
+                                      _condKeyMm = value!;
                                     });
                                   }),
                             ),
