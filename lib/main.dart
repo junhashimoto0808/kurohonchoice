@@ -1,15 +1,14 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:kurohonchoice/dialogkeychange.dart';
+import 'package:kurohonchoice/dialogstylechange.dart';
 import 'songdata.dart';
 import 'dart:math' as math;
 import 'package:url_launcher/link.dart';
 import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-//import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:roulette/roulette.dart';
-import 'arrow.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -334,6 +333,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
               ListTile(
+                title: const Text('ランダムスタイルセレクター'),
+                onTap: () {
+                  Navigator.pop(context);
+                  showDialog<void>(
+                      //barrierDismissible: false,
+                      context: context,
+                      builder: (_) {
+                        const vd = DialogStyleChange();
+                        return vd;
+                      });
+                },
+              ),
+              ListTile(
                 title: const Text('Help'),
                 onTap: () {
                   Navigator.pop(context);
@@ -384,23 +396,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Column(
-                        // Column is also a layout widget. It takes a list of children and
-                        // arranges them vertically. By default, it sizes itself to fit its
-                        // children horizontally, and tries to be as tall as its parent.
-                        //
-                        // Column has various properties to control how it sizes itself and
-                        // how it positions its children. Here we use mainAxisAlignment to
-                        // center the children vertically; the main axis here is the vertical
-                        // axis because Columns are vertical (the cross axis would be
-                        // horizontal).
-                        //
-                        // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-                        // action in the IDE, or press "p" in the console), to see the
-                        // wireframe for each widget.
-
-                        //hashi mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
-
                         children: <Widget>[
                           CopyableText(
                             //'曲名：'
@@ -412,13 +408,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             style: TextStyle(fontSize: 15),
                           ),
                           DataTable(
-                            /*
-                  columnWidths: {
-                    0: FlexColumnWidth(2),
-                    1: FlexColumnWidth(1),
-                    2: FlexColumnWidth(3),
-                  },
-                  */
                             headingRowHeight: 0,
                             dataRowMinHeight: 25,
                             dataRowMaxHeight: 25,
@@ -455,35 +444,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                   DataCell(CopyableText(_songKey)),
                                 ],
                               ),
-                              /*
-                                  DataRow(
-                                    cells: [
-                                      const DataCell(Text('キー')),
-                                      DataCell(GestureDetector(
-                                        onTap: () async {
-                                          //タップ処理
-                                          final String? selectedText =
-                                              await showDialog<String>(
-                                                  context: context,
-                                                  builder: (_) {
-                                                    return WillPopScope(
-                                                      child:
-                                                          const KeyChoiceDialogSample(),
-                                                      onWillPop: () async =>
-                                                          false,
-                                                    );
-                                                  });
-                                        },
-                                        child: Text(
-                                          _songKey,
-                                          style: const TextStyle(
-                                            color: Colors.blue,
-                                          ),
-                                        ),
-                                      )),
-                                    ],
-                                  ),
-                                  */
                               DataRow(
                                 cells: [
                                   const DataCell(Text('拍子')),
@@ -527,8 +487,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                 style: TextStyle(fontSize: 13),
                               ),
                               Link(
-                                // 開きたいWebページのURLを指定
-                                //String uriText = 'https://www.youtube.com/' + 'Jazz' + _songName;
                                 uri: Uri.parse(
                                     'https://www.youtube.com/results?search_query=Jazz $_songName'),
                                 // targetについては後述
@@ -850,10 +808,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
 class CopyableText extends Text {
   const CopyableText(
-    String data, {
-    Key? key,
-    TextStyle? style,
-  }) : super(data, key: key, style: style);
+    super.data, {
+    super.key,
+    super.style,
+  });
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -875,7 +833,7 @@ class CopyableText extends Text {
 
 // ignore: must_be_immutable
 class AlertDialogSample extends StatelessWidget {
-  AlertDialogSample({Key? key}) : super(key: key);
+  AlertDialogSample({super.key});
   String copyText = '';
 
   @override
@@ -934,301 +892,6 @@ class VersionDialog extends StatelessWidget {
         'Version:$_version\nBuildNumber:$_buildNumber',
         style: const TextStyle(fontSize: 13),
       ),
-
-      /*
-      content: Text(
-        '',
-        style: TextStyle(fontSize: 13),
-      ),
-      */
-/*
-      actions: <Widget>[
-        GestureDetector(
-          child: Text(
-            'いいえ',
-            style: TextStyle(fontSize: 13),
-          ),
-          onTap: () {
-            Navigator.pop(context);
-          },
-        ),
-        GestureDetector(
-          child: const Text(
-            'OK',
-            style: TextStyle(fontSize: 13),
-          ),
-          onTap: () {
-            //Clipboard.setData(ClipboardData(text: copyText));
-            Navigator.pop(context);
-          },
-        )
-      ],
-      */
     );
-  }
-}
-
-class MyRoulette extends StatelessWidget {
-  const MyRoulette({
-    Key? key,
-    required this.controller,
-  }) : super(key: key);
-
-  final RouletteController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: [
-        SizedBox(
-          width: 260,
-          height: 260,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 30),
-            child: Roulette(
-              // Provide controller to update its state
-              controller: controller,
-              // Configure roulette's appearance
-              style: const RouletteStyle(
-                dividerThickness: 0.0,
-                dividerColor: Colors.black,
-                centerStickSizePercent: 0.05,
-                centerStickerColor: Colors.black,
-              ),
-            ),
-          ),
-        ),
-        const Arrow(),
-      ],
-    );
-  }
-}
-
-class DialogKeyChange extends StatefulWidget {
-  const DialogKeyChange({Key? key}) : super(key: key);
-
-  @override
-  State<DialogKeyChange> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<DialogKeyChange>
-    with SingleTickerProviderStateMixin {
-  static final _random = Random();
-
-  late RouletteController _controller;
-  //bool _clockwise = true;
-
-/*
-  final colors = <Color>[
-    Colors.red.withAlpha(50),
-    Colors.green.withAlpha(30),
-    Colors.blue.withAlpha(70),
-    Colors.yellow.withAlpha(90),
-    Colors.amber.withAlpha(50),
-    Colors.indigo.withAlpha(70),
-  ];
-*/
-  final colors = <Color>[
-    Colors.blue.withAlpha(70),
-    Colors.indigo.withAlpha(70),
-    Colors.blue.withAlpha(70),
-    Colors.indigo.withAlpha(70),
-    Colors.blue.withAlpha(70),
-    Colors.indigo.withAlpha(70),
-    Colors.blue.withAlpha(70),
-    Colors.indigo.withAlpha(70),
-    Colors.blue.withAlpha(70),
-    Colors.indigo.withAlpha(70),
-    Colors.blue.withAlpha(70),
-    Colors.indigo.withAlpha(70),
-  ];
-
-/*
-  final icons = <IconData>[
-    Icons.ac_unit,
-    Icons.access_alarm,
-    Icons.access_time,
-    Icons.accessibility,
-    Icons.account_balance,
-    Icons.account_balance_wallet,
-    Icons.ac_unit,
-    Icons.access_alarm,
-    Icons.access_time,
-    Icons.accessibility,
-    Icons.account_balance,
-    Icons.account_balance_wallet,
-  ];
-*/
-/*
-  final images = <ImageProvider>[
-    // Use [AssetImage] if you have 2.0x, 3.0x images,
-    // We only have 1 exact image here
-    const ExactAssetImage("asset/gradient.jpg"),
-    const NetworkImage("https://picsum.photos/seed/example1/400"),
-    const ExactAssetImage("asset/gradient.jpg"),
-    const NetworkImage("https://bad.link.to.image"),
-    const ExactAssetImage("asset/gradient.jpg"),
-    const NetworkImage("https://picsum.photos/seed/example5/400"),
-    const ExactAssetImage("asset/gradient.jpg"),
-    const NetworkImage("https://picsum.photos/seed/example1/400"),
-    const ExactAssetImage("asset/gradient.jpg"),
-    const NetworkImage("https://bad.link.to.image"),
-    const ExactAssetImage("asset/gradient.jpg"),
-    const NetworkImage("https://picsum.photos/seed/example5/400"),
-    // MemoryImage(...)
-    // FileImage(...)
-    // ResizeImage(...)
-  ];
-*/
-
-  final texts = [
-    'C',
-    'Db',
-    'D',
-    'Eb',
-    'E',
-    'F',
-    'Gb',
-    'G',
-    'Ab',
-    'A',
-    'Bb',
-    'B',
-  ];
-
-  @override
-  void initState() {
-    super.initState();
-
-    //assert(colors.length == icons.length);
-    //assert(colors.length == images.length);
-
-/*
-    _controller = RouletteController(
-      vsync: this,
-      group: RouletteGroup.uniformImages(
-        colors.length,
-        colorBuilder: (index) => colors[index],
-        imageBuilder: (index) => images[index],
-        textBuilder: (index) => texts[index],
-        /*
-        textBuilder: (index) {
-          if (index == 0) return 'Hi';
-          return '';
-        },
-        */
-        styleBuilder: (index) {
-          return const TextStyle(color: Colors.black, fontSize: 18);
-        },
-      ),
-    );
-    
-        */
-    final group = RouletteGroup.uniform(
-      12,
-      colorBuilder: (index) {
-        return colors[index];
-      },
-      textBuilder: (index) {
-        return texts[index];
-      },
-    );
-    _controller = RouletteController(vsync: this, group: group);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      /*
-      appBar: AppBar(
-          //title: const Text('Roulette'),
-          ),
-          */
-      body: Container(
-        decoration: BoxDecoration(
-          color: Colors.pink.withOpacity(0.1),
-        ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              /*
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text(
-                    "Clockwise: ",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Switch(
-                    value: _clockwise,
-                    onChanged: (onChanged) {
-                      setState(() {
-                        _controller.resetAnimation();
-                        _clockwise = !_clockwise;
-                      });
-                    },
-                  ),
-                ],
-              ),
-              */
-              MyRoulette(controller: _controller),
-            ],
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      /*
-      floatingActionButton: FloatingActionButton(
-        // Use the controller to run the animation with rollTo method
-        onPressed: () => _controller.rollTo(
-          3,
-          //clockwise: _clockwise,
-          //minRotateCircles : Rotate
-          //duration: Durations.extralong1,
-          //curve: Curves.ease,
-          offset: _random.nextDouble() * 12,
-        ),
-        child: const Icon(Icons.refresh_rounded),
-      ),
-      */
-      floatingActionButton: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          FloatingActionButton(
-            // Use the controller to run the animation with rollTo method
-            onPressed: () => _controller.rollTo(
-              3,
-              //clockwise: _clockwise,
-              //minRotateCircles : Rotate
-              duration: Durations.extralong4,
-              curve: Curves.fastLinearToSlowEaseIn,
-              offset: _random.nextDouble() * 12,
-            ),
-            child: const Icon(Icons.refresh_rounded),
-          ),
-          const SizedBox(
-            height: 16 /*間隔*/,
-          ),
-          FloatingActionButton(
-            child: const Icon(
-              Icons.chevron_left,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-        ],
-      ),
-    );
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
   }
 }
