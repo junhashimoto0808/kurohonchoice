@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:kurohonchoice/dialogkeychange.dart';
 import 'package:kurohonchoice/dialogstylechange.dart';
@@ -289,17 +287,6 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           centerTitle: true,
           title: Text(widget.title),
-
-          /*
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.help),
-            onPressed: () {
-              ;
-            },
-          )
-        ],
-        */
         ),
 
         drawer: Drawer(
@@ -372,14 +359,6 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Builder(
             builder: ((context) => SingleChildScrollView(
                 physics: const AlwaysScrollableScrollPhysics(),
-                //child: SelectionArea(
-                /*
-                child: 
-                SizedBox(
-                    height: MediaQuery.of(context).size.height -
-                        (Scaffold.of(context).appBarMaxHeight ?? 0),
-                        */
-                // ignore: sort_child_properties_last
                 child: Column(
                   children: [
                     Container(
