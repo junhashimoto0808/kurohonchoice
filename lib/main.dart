@@ -320,7 +320,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
               ListTile(
-                title: const Text('ランダムスタイルセレクター'),
+                title: const Text('ランダムテンポセレクター'),
                 onTap: () {
                   Navigator.pop(context);
                   showDialog<void>(

@@ -3,8 +3,8 @@ List<List<String>> styleData = [
     '1',
     'Very Fast Swing',
     '304',
-    '-',
-    '304',
+    '400',
+    '352',
   ],
   [
     '2',
