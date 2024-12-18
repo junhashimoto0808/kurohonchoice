@@ -1,12 +1,17 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:kurohonchoice/dialogkeychange.dart';
 import 'package:kurohonchoice/dialogstylechange.dart';
+import 'package:kurohonchoice/image_viewer.dart';
+import 'package:path_provider/path_provider.dart';
 import 'songdata.dart';
 import 'dart:math' as math;
 import 'package:url_launcher/link.dart';
 import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'zip_uploader.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -104,6 +109,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final _controller = TextEditingController();
   final _controller2 = TextEditingController();
+
+  List<File> _images = [];
 
   _MyHomePageState() {
     //スタイルの検索条件を作成
@@ -333,6 +340,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
               ListTile(
+                title: const Text('黒本データアップロード'),
+                onTap: () {
+                  Navigator.pop(context);
+                  showDialog<void>(
+                      //barrierDismissible: false,
+                      context: context,
+                      builder: (_) {
+                        final vd = ZipUploader();
+                        return vd;
+                      });
+                },
+              ),
+              ListTile(
                 title: const Text('Help'),
                 onTap: () {
                   Navigator.pop(context);
@@ -462,7 +482,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           Row(
                             children: [
                               const Text(
-                                '検索：',
+                                'リンク：',
                                 style: TextStyle(fontSize: 13),
                               ),
                               Link(
@@ -539,6 +559,45 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ),
                                     child: const Text(
                                       'iRealPro',
+                                      style: TextStyle(fontSize: 13),
+                                    ),
+                                  );
+                                },
+                              ),
+                              Link(
+                                uri: Uri.parse('imageviewer://show'),
+                                target: LinkTarget.blank,
+                                builder:
+                                    (BuildContext ctx, FollowLink? openLink) {
+                                  return TextButton(
+                                    onPressed: () async {
+                                      // 非同期処理中にBuildContextを使用しない
+                                      if (_images.isEmpty) {
+                                        await _loadImages(); // 画像をロード
+                                      }
+
+                                      if (!mounted)
+                                        return; // ウィジェットが破棄されていないか確認
+
+                                      if (_images.isNotEmpty) {
+                                        Navigator.push(
+                                          ctx,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                ImageViewer(images: _images),
+                                          ),
+                                        );
+                                      } else {
+                                        // エラーメッセージを表示
+                                        ScaffoldMessenger.of(ctx).showSnackBar(
+                                          SnackBar(
+                                              content: Text(
+                                                  '画像がありません。ZIPをアップロードしてください。')),
+                                        );
+                                      }
+                                    },
+                                    child: const Text(
+                                      '黒本',
                                       style: TextStyle(fontSize: 13),
                                     ),
                                   );
@@ -782,6 +841,26 @@ class _MyHomePageState extends State<MyHomePage> {
         ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
+  }
+
+  Future<void> _loadImages() async {
+    final appDir = await getApplicationDocumentsDirectory();
+    final imagesDir = Directory('${appDir.path}/images');
+
+    if (await imagesDir.exists()) {
+      final files = imagesDir.listSync().where((file) {
+        final ext = file.path.split('.').last.toLowerCase();
+        return ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'].contains(ext);
+      }).toList();
+
+      setState(() {
+        _images = files.map((file) => File(file.path)).toList();
+      });
+
+      print("画像をロードしました: ${_images.map((e) => e.path).toList()}");
+    } else {
+      print("解凍済みディレクトリが存在しません。");
+    }
   }
 }
 

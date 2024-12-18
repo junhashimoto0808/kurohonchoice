@@ -43,6 +43,11 @@ dependencies:
 
   metronome: ^1.1.0+1
 
+  file_picker: ^5.2.5  # ZIPファイル選択
+  archive: ^3.3.1       # ZIP解凍
+  photo_view: ^0.14.0   # 全画面画像ビューア
+  path_provider: ^2.0.14 # アプリ内部ストレージ管理
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
